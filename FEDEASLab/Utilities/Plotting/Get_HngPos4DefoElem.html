@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Get_HngPos4DefoElem</title>
+  <meta name="keywords" content="Get_HngPos4DefoElem">
+  <meta name="description" content="GET_HNGPOS4DEFOELEM determine axial and flexural hinge position for deformed element">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../FEDEASLab.html">Home</a> &gt;  <a href="../FEDEASLab.html">Utilities</a> &gt; <a href="FEDEASLab.html">Plotting</a> &gt; Get_HngPos4DefoElem.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../FEDEASLab.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities\Plotting&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>Get_HngPos4DefoElem
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>GET_HNGPOS4DEFOELEM determine axial and flexural hinge position for deformed element</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function [AxHngCoor,FlHngCoor] = Get_HngPos4DefoElem (XYiod,XYjod,xyd,HngOpt) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment">GET_HNGPOS4DEFOELEM determine axial and flexural hinge position for deformed element
+  [AXHNGCOOR,FLHNGCOOR] = GET_HNGPOS4DEFOELEM(XYIOD,XYJOD,XYD,HNGOPT)
+  the function determines the axial hinge coordinates AXHNGCOOR and the
+  flexural hinge coordinates FLHNGCOOR for a deformed truss or frame element
+  from the end node coordinates XYIOD and XYJOD of the deformed configuration
+  and the local deformed coordinates XYD of the deformed shape;
+  the data structure HNGOPT has the fields HngSz for the hinge size and
+  HngOf for the offset of the hinge location from the element end</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Plot_DeformedStructure.html" class="code" title="function Plot_DeformedStructure (Model,ElemData,U,Post,PlotOpt)">Plot_DeformedStructure</a>	PLOT_DEFORMEDSTRUCTURE plot deformed shape of the structure</li></ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

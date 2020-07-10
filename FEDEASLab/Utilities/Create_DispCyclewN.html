@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Create_DispCyclewN</title>
+  <meta name="keywords" content="Create_DispCyclewN">
+  <meta name="description" content="CREATE_DISPCYCLEwN generate time and value pairs of a displacement cycle with normal force">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../FEDEASLab.html">Home</a> &gt;  <a href="FEDEASLab.html">Utilities</a> &gt; Create_DispCyclewN.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../FEDEASLab.html"><img alt="<" border="0" src="../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities&nbsp;<img alt=">" border="0" src="../right.png"></a></td></tr></table>-->
+
+<h1>Create_DispCyclewN
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>CREATE_DISPCYCLEwN generate time and value pairs of a displacement cycle with normal force</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>function [DspHst,FrcHst] = Create_DispCyclewN (DspPat,Options) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="fragment"><pre class="comment">CREATE_DISPCYCLEwN generate time and value pairs of a displacement cycle with normal force    
+  [DSPHST,FRCHST] = CREATE_DISPCYCLEwN (DSPPAT,OPTIONS)
+  the function generates the time and value pairs for the displacement path in DSPPAT
+  under constant or variable normal force N; the function returns the displacement history
+  in the data structure array DSPHST with fields Time and Value
+  and the axial force history in the data structure FRCHST with fields Time and Value;
+  the displacement history consists of unit or zero values at reversals,
+  while the force history consists of unit values for constant axial force +- the variable
+  axial force ratio NRat relative to the constant axial force specified in Options;
+  the structure array DSPHST has one entry for uniaxial and 2 entries for biaxial
+  displacement patterns; FRCHST has only one entry;
+  DSPPAT is a character variable identifying the displacement path:
+  cases 1-4 correspond to constant axial force N and cases 5-8 to variable axial force
+  A1(A5)  : uniaxial displacement history in 1-direction
+  A2(A6)  : uniaxial displacement history in 2-direction
+  A3(A7)  : counter-clock wise clover leaf pattern
+  A4(A8)  : diagonal displacement history (scaling to be specified in reference values)
+  AN1(AN5): diamond  displacement pattern
+  AN2(AN6): circular displacement pattern
+  OPTIONS is an optional data structure with the following fields:
+        .TrmpN = time interval for ramping up         the application of the axial force N
+        .TrmpU = time interval for ramping up or down the application of first U
+        .Nsub  = time subdivision for description of circular path
+        .NRat  = ratio for axial force variation relative to constant value
+        .HCyc  = true or false; if true the function returns a half    cycle instead of full
+        .QCyc  = true or false; if true the function returns a quarter cycle instead of full</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../matlabicon.gif)">
+<li><a href="Create_MultDispCycleswN.html" class="code" title="function [DspHst,FrcHst] = Create_MultDispCycleswN (DspPat,Ucyc,Ncyc,TmStr,Options)">Create_MultDispCycleswN</a>	CREATE_MULTDISPCYCLESwN sequence of full, half or quarter displacement cycles with axial force</li></ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

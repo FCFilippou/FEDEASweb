@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of LinearStep</title>
+  <meta name="keywords" content="LinearStep">
+  <meta name="description" content="LINEARSTEP sets up and solves the structure equilibrium equations for single load step">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../FEDEASLab.html">Home</a> &gt;  <a href="FEDEASLab.html">Solution_Library</a> &gt; LinearStep.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../FEDEASLab.html"><img alt="<" border="0" src="../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Solution_Library&nbsp;<img alt=">" border="0" src="../right.png"></a></td></tr></table>-->
+
+<h1>LinearStep
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>LINEARSTEP sets up and solves the structure equilibrium equations for single load step</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>function State = LinearStep (Model,ElemData,Loading) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="fragment"><pre class="comment">LINEARSTEP sets up and solves the structure equilibrium equations for single load step
+  STATE = LINEARSTEP (MODEL,ELEMDATA,LOADING)
+  function sets up and solves the structure equilibrium equations for single load step
+  by direct assembly of element stiffness matrices; the structural response is contained
+  in data structure STATE with fields U for the global dof displacement vector, Pr for the
+  resisting force vector and Kf for the stiffness matrix at the free dofs of the structure;
+  information about the structural model is supplied in data structure MODEL,
+  the element properties are supplied in cell array ELEMDATA and loading information is
+  given in data structure LOADING with fields Pref and Uref for a single applied force and
+  a single imposed displacement vector, respectively</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../matlabicon.gif)">
+<li><a href="Initialize_State.html" class="code" title="function State = Initialize_State (Model,ElemData)">Initialize_State</a>	INITIALIZE_STATE initialize state variables of structural model and create STATE</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

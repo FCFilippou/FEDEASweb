@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>FEDEASLab - FedeasLab</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-170527070-1', 'auto');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">FedeasLab</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../quick.md" class="dropdown-item">Quick Start</a>
+</li>
+                                    
+<li>
+    <a href="../../DataStructs/" class="dropdown-item">Data Structures</a>
+</li>
+                                    
+<li>
+    <a href="../../dat/" class="dropdown-item">Schemas</a>
+</li>
+                                    
+<li>
+    <a href="../../sch/index" class="dropdown-item">Schemas-2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../api/" class="dropdown-item">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../matlib/" class="dropdown-item">Materials</a>
+</li>
+            
+<li>
+    <a href="../../elemlib/" class="dropdown-item">Elements</a>
+</li>
+            
+<li>
+    <a href="../../ModelLib/" class="dropdown-item">Modeling Library</a>
+</li>
+            
+<li>
+    <a href="../../FEDEASLab/Section_Library/FEDEASLab.md" class="dropdown-item">Section Library</a>
+</li>
+            
+<li>
+    <a href="../../FEDEASLab/Solution_Library/FEDEASLab/" class="dropdown-item">Solution Library</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Basic/FEDEASLab.md" class="dropdown-item">Basic analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Dynamics/FEDEASLab/" class="dropdown-item">Transient analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Plastic_Analysis/LimEqns_2dFrm/" class="dropdown-item">Plastic Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/General/FEDEASLab/" class="dropdown-item">Core</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../examples/" class="nav-link">Examples</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                    
+                        <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+        
+        
+        </ul>
+    </div>
+</div></div>
+                    
+
+                    
+                        <div class="col-md-8" role="main">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<body>
+<a name="_top"></a>
+<h1>Matlab Index</h1>
+<h2>Matlab Directories</h2>
+<ul style="list-style-image:url(./matlabicon.gif)">
+<li><a href="Basic/FEDEASLab/">Basic</a></li><li><a href="Dynamics/FEDEASLab/">Dynamics</a></li><li><a href="Element_Library/FEDEASLab/">Element_Library</a></li><li><a href="General/FEDEASLab/">General</a></li><li><a href="Material_Library/FEDEASLab/">Material_Library</a></li><li><a href="Section_Library/FEDEASLab/">Section_Library</a></li><li><a href="Solution_Library/FEDEASLab/">Solution_Library</a></li><li><a href="Utilities/FEDEASLab/">Utilities</a></li><li><a href="Utilities/Interpolation/FEDEASLab/">Utilities\Interpolation</a></li><li><a href="Utilities/Plotting/FEDEASLab/">Utilities\Plotting</a></li><li><a href="Utilities/PostProcessing/FEDEASLab/">Utilities\PostProcessing</a></li><li><a href="Utilities/PreProcessing/FEDEASLab/">Utilities\PreProcessing</a></li><li><a href="Utilities/Quadrature/FEDEASLab/">Utilities\Quadrature</a></li></ul>
+<h2>Matlab Files found in these Directories</h2>
+<table width="100%">
+        <tr>
+            <td><a href="Utilities/PreProcessing/AISC_Section/" title="Utilities\PreProcessing">AISC_Section</a></td>       <td><a href="Utilities/PreProcessing/Create_RectBarGrid/" title="Utilities\PreProcessing">Create_RectBarGrid</a></td>       <td><a href="Utilities/Interpolation/Hermite/" title="Utilities\Interpolation">Hermite</a></td>     <td><a href="Utilities/Plotting/Plot_2dMomntDistr/" title="Utilities\Plotting">Plot_2dMomntDistr</a></td>   </tr>   <tr>
+            <td><a href="Basic/A_matrix/" title="Basic">A_matrix</a></td>       <td><a href="Utilities/PreProcessing/Create_RectOutline/" title="Utilities\PreProcessing">Create_RectOutline</a></td>       <td><a href="Utilities/Interpolation/HermiteN/" title="Utilities\Interpolation">HermiteN</a></td>       <td><a href="Utilities/Plotting/Plot_AxialForces/" title="Utilities\Plotting">Plot_AxialForces</a></td> </tr>   <tr>
+            <td><a href="Dynamics/AccelerationIntegral/" title="Dynamics">AccelerationIntegral</a></td>     <td><a href="Utilities/PreProcessing/Create_RectPatch/" title="Utilities\PreProcessing">Create_RectPatch</a></td>       <td><a href="Section_Library/HomoCircSecw1dMat/" title="Section_Library">HomoCircSecw1dMat</a></td>     <td><a href="Utilities/Plotting/Plot_BounCond/" title="Utilities\Plotting">Plot_BounCond</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Add_Bars2Section/" title="Utilities\PreProcessing">Add_Bars2Section</a></td>       <td><a href="Utilities/PreProcessing/Create_RectShape/" title="Utilities\PreProcessing">Create_RectShape</a></td>       <td><a href="Section_Library/HomoRectSecw1dMat/" title="Section_Library">HomoRectSecw1dMat</a></td>     <td><a href="Utilities/Plotting/Plot_DeformedStructure/" title="Utilities\Plotting">Plot_DeformedStructure</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Add_Brace2Frame/" title="Utilities\PreProcessing">Add_Brace2Frame</a></td>     <td><a href="Utilities/PreProcessing/Create_RectwCovOutline/" title="Utilities\PreProcessing">Create_RectwCovOutline</a></td>       <td><a href="Section_Library/HomoWFSecw1dMat/" title="Section_Library">HomoWFSecw1dMat</a></td>     <td><a href="Utilities/Plotting/Plot_DispPath/" title="Utilities\Plotting">Plot_DispPath</a></td>   </tr>   <tr>
+            <td><a href="General/Add_Damping2State/" title="General">Add_Damping2State</a></td>     <td><a href="Utilities/PreProcessing/Create_SSecOutline/" title="Utilities\PreProcessing">Create_SSecOutline</a></td>       <td><a href="Solution_Library/Increment/" title="Solution_Library">Increment</a></td>       <td><a href="Utilities/Plotting/Plot_EQRecord/" title="Utilities\Plotting">Plot_EQRecord</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Add_GravityColumn2Frame/" title="Utilities\PreProcessing">Add_GravityColumn2Frame</a></td>     <td><a href="Utilities/PreProcessing/Create_ShapewMat/" title="Utilities\PreProcessing">Create_ShapewMat</a></td>       <td><a href="Element_Library/Inel2dFrm_wLHNMYS/" title="Element_Library">Inel2dFrm_wLHNMYS</a></td>     <td><a href="Utilities/Plotting/Plot_ElemLoading/" title="Utilities\Plotting">Plot_ElemLoading</a></td> </tr>   <tr>
+            <td><a href="General/Add_Mass2Model/" title="General">Add_Mass2Model</a></td>       <td><a href="General/Create_SimpleModel/" title="General">Create_SimpleModel</a></td>       <td><a href="Element_Library/Inel2dFrm_wLPPM/" title="Element_Library">Inel2dFrm_wLPPM</a></td>     <td><a href="Utilities/Plotting/Plot_ForcDistr/" title="Utilities\Plotting">Plot_ForcDistr</a></td> </tr>   <tr>
+            <td><a href="Utilities/PostProcessing/Add_OpenPHIndx2Post/" title="Utilities\PostProcessing">Add_OpenPHIndx2Post</a></td>       <td><a href="Utilities/PreProcessing/Create_TSecOutline/" title="Utilities\PreProcessing">Create_TSecOutline</a></td>       <td><a href="Element_Library/Inel2dFrm_wOneComp/" title="Element_Library">Inel2dFrm_wOneComp</a></td>       <td><a href="Utilities/Plotting/Plot_Hinge4Elem/" title="Utilities\Plotting">Plot_Hinge4Elem</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Add_Shape2Section/" title="Utilities\PreProcessing">Add_Shape2Section</a></td>     <td><a href="Utilities/Plotting/Create_Window/" title="Utilities\Plotting">Create_Window</a></td>       <td><a href="Element_Library/Inel2dFrm_wTwoComp/" title="Element_Library">Inel2dFrm_wTwoComp</a></td>       <td><a href="Utilities/Plotting/Plot_IPVarDistr/" title="Utilities\Plotting">Plot_IPVarDistr</a></td>   </tr>   <tr>
+            <td><a href="General/Aj_matrix/" title="General">Aj_matrix</a></td>     <td><a href="Utilities/D_index/" title="Utilities">D_index</a></td>     <td><a href="Material_Library/InelJ2PwLH3dMat/" title="Material_Library">InelJ2PwLH3dMat</a></td>       <td><a href="Utilities/Plotting/Plot_LoadHistory/" title="Utilities\Plotting">Plot_LoadHistory</a></td> </tr>   <tr>
+            <td><a href="Utilities/Plotting/Animate_EventSequence/" title="Utilities\Plotting">Animate_EventSequence</a></td>       <td><a href="Element_Library/DefGeom_2dFrm/" title="Element_Library">DefGeom_2dFrm</a></td>     <td><a href="Material_Library/InelLPwLH1dMat/" title="Material_Library">InelLPwLH1dMat</a></td>     <td><a href="Utilities/Plotting/Plot_Mesh4Circ/" title="Utilities\Plotting">Plot_Mesh4Circ</a></td> </tr>   <tr>
+            <td><a href="Utilities/Plotting/Animate_ResponsewHngHist/" title="Utilities\Plotting">Animate_ResponsewHngHist</a></td>     <td><a href="Element_Library/DefGeom_3dFrm/" title="Element_Library">DefGeom_3dFrm</a></td>     <td><a href="Dynamics/InelSDOF_Newmark/" title="Dynamics">InelSDOF_Newmark</a></td>     <td><a href="Utilities/Plotting/Plot_Mesh4MultRectShape/" title="Utilities\Plotting">Plot_Mesh4MultRectShape</a></td>   </tr>   <tr>
+            <td><a href="Basic/B_matrix/" title="Basic">B_matrix</a></td>       <td><a href="Element_Library/DeformShape2dFrm/" title="Element_Library">DeformShape2dFrm</a></td>       <td><a href="Element_Library/InelTruss/" title="Element_Library">InelTruss</a></td>     <td><a href="Utilities/Plotting/Plot_Model/" title="Utilities\Plotting">Plot_Model</a></td> </tr>   <tr>
+            <td><a href="Basic/BbariBbarx_matrix/" title="Basic">BbariBbarx_matrix</a></td>     <td><a href="Element_Library/DeformShape2dFrm_wCurvIntp/" title="Element_Library">DeformShape2dFrm_wCurvIntp</a></td>       <td><a href="Solution_Library/Initialize/" title="Solution_Library">Initialize</a></td>     <td><a href="Utilities/Plotting/Plot_NodalForces/" title="Utilities\Plotting">Plot_NodalForces</a></td> </tr>   <tr>
+            <td><a href="Material_Library/BilinElastic1dMat/" title="Material_Library">BilinElastic1dMat</a></td>       <td><a href="Element_Library/DeformShape2dFrm_wDispIntp/" title="Element_Library">DeformShape2dFrm_wDispIntp</a></td>       <td><a href="Solution_Library/Initialize_SolStrat/" title="Solution_Library">Initialize_SolStrat</a></td>       <td><a href="Utilities/Plotting/Plot_OpenPlasticHinges/" title="Utilities\Plotting">Plot_OpenPlasticHinges</a></td> </tr>   <tr>
+            <td><a href="Material_Library/BilinHyst1dMat/" title="Material_Library">BilinHyst1dMat</a></td>     <td><a href="Element_Library/Dinel2dFrm_EBwDF/" title="Element_Library">Dinel2dFrm_EBwDF</a></td>       <td><a href="Solution_Library/Initialize_State/" title="Solution_Library">Initialize_State</a></td>     <td><a href="Utilities/Plotting/Plot_PlasticHinges/" title="Utilities\Plotting">Plot_PlasticHinges</a></td> </tr>   <tr>
+            <td><a href="Material_Library/BilinInel1dMat/" title="Material_Library">BilinInel1dMat</a></td>     <td><a href="Element_Library/Dinel2dFrm_EBwFF/" title="Element_Library">Dinel2dFrm_EBwFF</a></td>       <td><a href="Solution_Library/Iterate/" title="Solution_Library">Iterate</a></td>       <td><a href="Utilities/Plotting/Plot_Releases/" title="Utilities\Plotting">Plot_Releases</a></td>   </tr>   <tr>
+            <td><a href="Material_Library/BilinOrOr1dMat/" title="Material_Library">BilinOrOr1dMat</a></td>     <td><a href="Utilities/Plotting/Draw_3dAxisCross/" title="Utilities\Plotting">Draw_3dAxisCross</a></td>     <td><a href="Basic/Ks_matrix/" title="Basic">Ks_matrix</a></td>     <td><a href="Utilities/Plotting/Plot_SectionGeometry/" title="Utilities\Plotting">Plot_SectionGeometry</a></td> </tr>   <tr>
+            <td><a href="Material_Library/BilinPkOr1dMat/" title="Material_Library">BilinPkOr1dMat</a></td>     <td><a href="Utilities/Plotting/Draw_Arrow/" title="Utilities\Plotting">Draw_Arrow</a></td>     <td><a href="Element_Library/LE2dFrm/" title="Element_Library">LE2dFrm</a></td>     <td><a href="Utilities/Plotting/Plot_StoryDistr/" title="Utilities\Plotting">Plot_StoryDistr</a></td>   </tr>   <tr>
+            <td><a href="Element_Library/Check3dFrmAxes/" title="Element_Library">Check3dFrmAxes</a></td>       <td><a href="Utilities/Plotting/Draw_AxisCross/" title="Utilities\Plotting">Draw_AxisCross</a></td>     <td><a href="Element_Library/LE2dFrm_wPdelta/" title="Element_Library">LE2dFrm_wPdelta</a></td>     <td><a href="Utilities/Plotting/Plot_XYData/" title="Utilities\Plotting">Plot_XYData</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/CircLayer2Bar/" title="Utilities\PreProcessing">CircLayer2Bar</a></td>     <td><a href="Utilities/Plotting/Draw_Cube/" title="Utilities\Plotting">Draw_Cube</a></td>       <td><a href="Element_Library/LE3dFrm/" title="Element_Library">LE3dFrm</a></td>     <td><a href="Utilities/Print_PDFile/" title="Utilities">Print_PDFile</a></td>   </tr>   <tr>
+            <td><a href="Utilities/CleanStart/" title="Utilities">CleanStart</a></td>       <td><a href="Dynamics/EigenMode/" title="Dynamics">EigenMode</a></td>       <td><a href="Element_Library/LETruss/" title="Element_Library">LETruss</a></td>     <td><a href="Basic/Q0_vector/" title="Basic">Q0_vector</a></td> </tr>   <tr>
+            <td><a href="Utilities/PostProcessing/Complete_QV/" title="Utilities\PostProcessing">Complete_QV</a></td>       <td><a href="Dynamics/ElasticResponseSpectrum/" title="Dynamics">ElasticResponseSpectrum</a></td>       <td><a href="Dynamics/LSDOF_LinearWilson/" title="Dynamics">LSDOF_LinearWilson</a></td>     <td><a href="Utilities/PostProcessing/Q2Post/" title="Utilities\PostProcessing">Q2Post</a></td> </tr>   <tr>
+            <td><a href="Solution_Library/Condense_MV/" title="Solution_Library">Condense_MV</a></td>       <td><a href="Utilities/PreProcessing/ElemData2Qpl/" title="Utilities\PreProcessing">ElemData2Qpl</a></td>       <td><a href="Dynamics/LSDOF_Newmark/" title="Dynamics">LSDOF_Newmark</a></td>       <td><a href="Section_Library/ReCircSecw1dMat/" title="Section_Library">ReCircSecw1dMat</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_BoxOutline/" title="Utilities\PreProcessing">Create_BoxOutline</a></td>     <td><a href="Utilities/PreProcessing/ElemData4SteelBraces/" title="Utilities\PreProcessing">ElemData4SteelBraces</a></td>       <td><a href="Utilities/Plotting/Label_2dMoments/" title="Utilities\Plotting">Label_2dMoments</a></td>       <td><a href="Section_Library/ReRectSecw1dMat/" title="Section_Library">ReRectSecw1dMat</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_BoxwOvhOutline/" title="Utilities\PreProcessing">Create_BoxwOvhOutline</a></td>     <td><a href="Utilities/PreProcessing/ElemData4SteelFrame/" title="Utilities\PreProcessing">ElemData4SteelFrame</a></td>     <td><a href="Utilities/Plotting/Label_AxialForces/" title="Utilities\Plotting">Label_AxialForces</a></td>       <td><a href="Basic/Readme/" title="Basic">Readme</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_CSecOutline/" title="Utilities\PreProcessing">Create_CSecOutline</a></td>       <td><a href="Element_Library/ElementLoading/" title="Element_Library">ElementLoading</a></td>       <td><a href="Utilities/Plotting/Label_Model/" title="Utilities\Plotting">Label_Model</a></td>       <td><a href="Utilities/PreProcessing/Rectangle2Fiber/" title="Utilities\PreProcessing">Rectangle2Fiber</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_CircBarGrid/" title="Utilities\PreProcessing">Create_CircBarGrid</a></td>       <td><a href="Basic/ElmLenOr/" title="Basic">ElmLenOr</a></td>       <td><a href="Utilities/Interpolation/Lagrange/" title="Utilities\Interpolation">Lagrange</a></td>       <td><a href="Utilities/SIUnits/" title="Utilities">SIUnits</a></td> </tr>   <tr>
+            <td><a href="General/Create_Damping/" title="General">Create_Damping</a></td>       <td><a href="Solution_Library/Event2Event_NLAnalysis/" title="Solution_Library">Event2Event_NLAnalysis</a></td>     <td><a href="Utilities/Interpolation/LagrangeN/" title="Utilities\Interpolation">LagrangeN</a></td>     <td><a href="Basic/S_Check_Global3dEQ/" title="Basic">S_Check_Global3dEQ</a></td>   </tr>   <tr>
+            <td><a href="Utilities/Create_DispCyclewN/" title="Utilities">Create_DispCyclewN</a></td>       <td><a href="Element_Library/ExtrReshu/" title="Element_Library">ExtrReshu</a></td>     <td><a href="Element_Library/Large2du2v_Frm/" title="Element_Library">Large2du2v_Frm</a></td>       <td><a href="Basic/S_DisplMethod/" title="Basic">S_DisplMethod</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_FrameSections/" title="Utilities\PreProcessing">Create_FrameSections</a></td>       <td><a href="Element_Library/Extract_BasicEl2SecState/" title="Element_Library">Extract_BasicEl2SecState</a></td>       <td><a href="Element_Library/Large3du2v_Frm/" title="Element_Library">Large3du2v_Frm</a></td>       <td><a href="Basic/S_ForceMethod/" title="Basic">S_ForceMethod</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_IPMesh4Circ/" title="Utilities\PreProcessing">Create_IPMesh4Circ</a></td>       <td><a href="Element_Library/Extract_El2MatState/" title="Element_Library">Extract_El2MatState</a></td>     <td><a href="Utilities/Plotting/LineProp4PlotSection/" title="Utilities\Plotting">LineProp4PlotSection</a></td>     <td><a href="Element_Library/SectionWrapper/" title="Element_Library">SectionWrapper</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_IPMesh4MultRectShape/" title="Utilities\PreProcessing">Create_IPMesh4MultRectShape</a></td>     <td><a href="Element_Library/Extract_El2SecState/" title="Element_Library">Extract_El2SecState</a></td>     <td><a href="Solution_Library/LinearStep/" title="Solution_Library">LinearStep</a></td>     <td><a href="Utilities/Quadrature/Simpson/" title="Utilities\Quadrature">Simpson</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_IPMesh4Rect/" title="Utilities\PreProcessing">Create_IPMesh4Rect</a></td>       <td><a href="Section_Library/Extract_Sec2MatState/" title="Section_Library">Extract_Sec2MatState</a></td>       <td><a href="Solution_Library/LoadFactorControl/" title="Solution_Library">LoadFactorControl</a></td>       <td><a href="Solution_Library/StateDetermination/" title="Solution_Library">StateDetermination</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_IPMesh4WFShape/" title="Utilities\PreProcessing">Create_IPMesh4WFShape</a></td>     <td><a href="General/Extract_Str2ElState/" title="General">Extract_Str2ElState</a></td>     <td><a href="Solution_Library/LoadFactorIncrement/" title="Solution_Library">LoadFactorIncrement</a></td>       <td><a href="General/Structure/" title="General">Structure</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_ISecOutline/" title="Utilities\PreProcessing">Create_ISecOutline</a></td>       <td><a href="Utilities/PreProcessing/FiberElemData4SteelBraces/" title="Utilities\PreProcessing">FiberElemData4SteelBraces</a></td>     <td><a href="Utilities/Quadrature/Lobatto/" title="Utilities\Quadrature">Lobatto</a></td>       <td><a href="General/SubIncr4ElemntSD/" title="General">SubIncr4ElemntSD</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_JntOffsets/" title="Utilities\PreProcessing">Create_JntOffsets</a></td>     <td><a href="Utilities/PreProcessing/FiberElemData4SteelFrame/" title="Utilities\PreProcessing">FiberElemData4SteelFrame</a></td>       <td><a href="Basic/Localize/" title="Basic">Localize</a></td>       <td><a href="Solution_Library/TimeIntegrationConstants/" title="Solution_Library">TimeIntegrationConstants</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_LSecOutline/" title="Utilities\PreProcessing">Create_LSecOutline</a></td>       <td><a href="Utilities/Plotting/FontProp4PlotSection/" title="Utilities\Plotting">FontProp4PlotSection</a></td>     <td><a href="Utilities/PreProcessing/MP1dInt4Circ/" title="Utilities\PreProcessing">MP1dInt4Circ</a></td>       <td><a href="Element_Library/TranJnt/" title="Element_Library">TranJnt</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_Load4Frame/" title="Utilities\PreProcessing">Create_Load4Frame</a></td>     <td><a href="Basic/Fs_matrix/" title="Basic">Fs_matrix</a></td>     <td><a href="Utilities/PreProcessing/MP2dInt4Circ/" title="Utilities\PreProcessing">MP2dInt4Circ</a></td>       <td><a href="Solution_Library/TransientIncrement/" title="Solution_Library">TransientIncrement</a></td> </tr>   <tr>
+            <td><a href="Utilities/Create_LoadHistory/" title="Utilities">Create_LoadHistory</a></td>       <td><a href="Material_Library/GMP1dMat/" title="Material_Library">GMP1dMat</a></td>     <td><a href="Material_Library/ManderConcr1dMat/" title="Material_Library">ManderConcr1dMat</a></td>     <td><a href="Solution_Library/TransientInitialize/" title="Solution_Library">TransientInitialize</a></td>   </tr>   <tr>
+            <td><a href="General/Create_Loading/" title="General">Create_Loading</a></td>       <td><a href="Element_Library/GPYS/" title="Element_Library">GPYS</a></td>       <td><a href="Element_Library/MaterialWrapper/" title="Element_Library">MaterialWrapper</a></td>     <td><a href="Solution_Library/TransientIterate/" title="Solution_Library">TransientIterate</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_MPMesh4Circ/" title="Utilities\PreProcessing">Create_MPMesh4Circ</a></td>       <td><a href="Utilities/Quadrature/Gauss/" title="Utilities\Quadrature">Gauss</a></td>       <td><a href="Utilities/Quadrature/Midpoint/" title="Utilities\Quadrature">Midpoint</a></td>     <td><a href="Solution_Library/TransientStateDetermination/" title="Solution_Library">TransientStateDetermination</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_MRFrame/" title="Utilities\PreProcessing">Create_MRFrame</a></td>       <td><a href="Element_Library/GeomTran_2dFrm/" title="Element_Library">GeomTran_2dFrm</a></td>       <td><a href="Dynamics/ModalAnalysis/" title="Dynamics">ModalAnalysis</a></td>       <td><a href="Utilities/Quadrature/Trap/" title="Utilities\Quadrature">Trap</a></td> </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_Mass4Frame/" title="Utilities\PreProcessing">Create_Mass4Frame</a></td>     <td><a href="Element_Library/GeomTran_3dFrm/" title="Element_Library">GeomTran_3dFrm</a></td>       <td><a href="Dynamics/ModeDecomposition/" title="Dynamics">ModeDecomposition</a></td>       <td><a href="Utilities/Units/" title="Utilities">Units</a></td> </tr>   <tr>
+            <td><a href="General/Create_Model/" title="General">Create_Model</a></td>       <td><a href="Element_Library/GeomTran_Truss/" title="Element_Library">GeomTran_Truss</a></td>       <td><a href="Section_Library/MultRectSecw1dMat/" title="Section_Library">MultRectSecw1dMat</a></td>     <td><a href="Solution_Library/Update_State/" title="Solution_Library">Update_State</a></td> </tr>   <tr>
+            <td><a href="Utilities/Create_MultDispCycleswN/" title="Utilities">Create_MultDispCycleswN</a></td>     <td><a href="Utilities/PostProcessing/Get_HFlrTrans/" title="Utilities\PostProcessing">Get_HFlrTrans</a></td>       <td><a href="Solution_Library/OneIteration/" title="Solution_Library">OneIteration</a></td>     <td><a href="Solution_Library/Update_TransientState/" title="Solution_Library">Update_TransientState</a></td>   </tr>   <tr>
+            <td><a href="Utilities/PreProcessing/Create_MultRectShape/" title="Utilities\PreProcessing">Create_MultRectShape</a></td>       <td><a href="Utilities/Plotting/Get_HngPos4DefoElem/" title="Utilities\Plotting">Get_HngPos4DefoElem</a></td>       <td><a href="Solution_Library/OneTransientIteration/" title="Solution_Library">OneTransientIteration</a></td>       <td><a href="Basic/V0_vector/" title="Basic">V0_vector</a></td> </tr>   <tr>
+            <td><a href="General/Create_NodalForces/" title="General">Create_NodalForces</a></td>       <td><a href="Utilities/Plotting/Get_ModelScale/" title="Utilities\Plotting">Get_ModelScale</a></td>     <td><a href="Solution_Library/PlasticAnalysis/" title="Solution_Library">PlasticAnalysis</a></td>       <td><a href="Element_Library/kg_2dFrm/" title="Element_Library">kg_2dFrm</a></td>   </tr>   <tr>
+            <td><a href="General/Create_NodalMass/" title="General">Create_NodalMass</a></td>       <td><a href="Utilities/PostProcessing/Get_RIStDrift/" title="Utilities\PostProcessing">Get_RIStDrift</a></td>       <td><a href="Basic/PlasticAnalysis_wLBT/" title="Basic">PlasticAnalysis_wLBT</a></td>       <td><a href="Element_Library/kg_3dFrm/" title="Element_Library">kg_3dFrm</a></td>   </tr>   <tr>
+            <td><a href="Solution_Library/Create_PlastLimSurface/" title="Solution_Library">Create_PlastLimSurface</a></td>     <td><a href="Utilities/PostProcessing/Get_StShear/" title="Utilities\PostProcessing">Get_StShear</a></td>       <td><a href="Basic/PlasticAnalysis_wUBT/" title="Basic">PlasticAnalysis_wUBT</a></td>       <td><a href="Element_Library/kg_Truss/" title="Element_Library">kg_Truss</a></td>   </tr>   <tr>
+            <td><a href="General/Create_PwForces/" title="General">Create_PwForces</a></td>     <td><a href="Utilities/H_index/" title="Utilities">H_index</a></td>     <td><a href="Utilities/Plotting/Plot_2dCurvDistr/" title="Utilities\Plotting">Plot_2dCurvDistr</a></td>     <td><a href="" title=""></a></td>   </tr></table>
+<hr><address>Generated on Wed 22-Jan-2020 08:42:47 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html></div>
+                    
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p> © 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a> </p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

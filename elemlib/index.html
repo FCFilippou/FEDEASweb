@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Elements - FedeasLab</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-170527070-1', 'auto');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">FedeasLab</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../quick.md" class="dropdown-item">Quick Start</a>
+</li>
+                                    
+<li>
+    <a href="../DataStructs/" class="dropdown-item">Data Structures</a>
+</li>
+                                    
+<li>
+    <a href="../dat/" class="dropdown-item">Schemas</a>
+</li>
+                                    
+<li>
+    <a href="../sch/index" class="dropdown-item">Schemas-2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../api/" class="dropdown-item">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../matlib/" class="dropdown-item">Materials</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Elements</a>
+</li>
+            
+<li>
+    <a href="../ModelLib/" class="dropdown-item">Modeling Library</a>
+</li>
+            
+<li>
+    <a href="../FEDEASLab/Section_Library/FEDEASLab.md" class="dropdown-item">Section Library</a>
+</li>
+            
+<li>
+    <a href="../FEDEASLab/Solution_Library/FEDEASLab/" class="dropdown-item">Solution Library</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../FEDEASLab/Basic/FEDEASLab.md" class="dropdown-item">Basic analysis</a>
+</li>
+                                    
+<li>
+    <a href="../FEDEASLab/Dynamics/FEDEASLab/" class="dropdown-item">Transient analysis</a>
+</li>
+                                    
+<li>
+    <a href="../FEDEASLab/Plastic_Analysis/LimEqns_2dFrm/" class="dropdown-item">Plastic Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../FEDEASLab/General/FEDEASLab/" class="dropdown-item">Core</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../examples/" class="nav-link">Examples</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <!-- <li class="nav-item">
+                                <a rel="prev" href="../matlib/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ModelLib/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                    
+                        <div>  </div>
+                    
+
+                    
+                        <div class="col-md-8" role="main">
+
+<h1 id="element-library">Element Library<div class="table-responsive"></h1>
+<p><table class="table"><thead> 
+         <tr> 
+             <th scope="col">#</th> 
+             <th scope="col">Element</th> 
+             <th scope="col">Description</th> 
+         </tr> 
+         </thead> 
+ <tbody>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionDinel2dFrm_EBwDF" data-parent="#accordionDinel2dFrm_EBwDF" href="#collapseDinel2dFrm_EBwDF"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="Dinel2dFrm_EBwDF.html">Dinel2dFrm_EBwDF</a></td>
+    <td>2d-frame element with distributed inelasticity (displacement formulation) </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseDinel2dFrm_EBwDF" class="collapse in p-3">
+<b>Parameters</b>
+<ul>
+<li> <code>w</code>: uniform element load ( w(1) = longitudinal, w(2) = transverse )</li>
+<li> <code>jntoff</code>: rigid joint offsets in global X and Y at element ends column 1 for node i, column 2 for node j</li>
+</ul></p>
+<p><b>State</b>
+<ul>
+<li> <code>u</code>: vector of total element displacements in global reference</li>
+<li> <code>Du</code>: vector of element displacement increments from last convergence</li>
+<li> <code>DDu</code>: vector of element displacement increments from last iteration</li>
+<li> <code>ke</code>: element stiffness matrix in global reference; updated under ACTION = 'stif'</li>
+<li> <code>p</code>: element resisting force vector in global reference; updated under ACTION = 'stif' or 'forc'</li>
+<li> <code>Past</code>: element history variables at last converged state</li>
+<li> <code>Pres</code>: current element history variables</li>
+<li> <code>lamda</code>: row vector of current load factor(s)</li>
+</ul>
+<div class="col-6"><img src="../img/Dinel2dFrm_EBwDF.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionDinel2dFrm_EBwFF" data-parent="#accordionDinel2dFrm_EBwFF" href="#collapseDinel2dFrm_EBwFF"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="Dinel2dFrm_EBwFF.html">Dinel2dFrm_EBwFF</a></td>
+    <td>2d-frame element with distributed inelasticity (force formulation) </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseDinel2dFrm_EBwFF" class="collapse in p-3">
+<b>Parameters</b>
+<ul>
+<li> <code>w</code>: uniform element load ( w(1) = longitudinal, w(2) = transverse )</li>
+</ul></p>
+<p><b>State</b>
+<ul>
+<li> <code>u</code>: vector of total element displacements in global reference</li>
+<li> <code>Du</code>: vector of element displacement increments from last convergence</li>
+<li> <code>DDu</code>: vector of element displacement increments from last iteration</li>
+<li> <code>ke</code>: element stiffness matrix in global reference; updated under ACTION = 'stif'</li>
+<li> <code>p</code>: element resisting force vector in global reference; updated under ACTION = 'stif' or 'forc'</li>
+<li> <code>Past</code>: element history variables at last converged state</li>
+<li> <code>Pres</code>: current element history variables</li>
+<li> <code>lamda</code>: row vector of current load factor(s)</li>
+</ul>
+<div class="col-6"><img src="../img/Dinel2dFrm_EBwFF.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionInel2dFrm_wLHNMYS" data-parent="#accordionInel2dFrm_wLHNMYS" href="#collapseInel2dFrm_wLHNMYS"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="Inel2dFrm_wLHNMYS.html">Inel2dFrm_wLHNMYS</a></td>
+    <td>2d linear elastic frame element with linear plastic hardening axial-flexure hinges </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseInel2dFrm_wLHNMYS" class="collapse in p-3">
+<b>Parameters</b>
+<ul>
+<li> <code>rho</code>: mass density</li>
+<li> <code>A</code>: cross sectional area</li>
+<li> <code>I</code>: moment of inertia</li>
+<li> <code>E</code>: modulus of elasticity</li>
+<li> <code>Np</code>: plastic axial capacity of element</li>
+<li> <code>Mp</code>: plastic moment capacity of element</li>
+<li> <code>GPYSC</code>: polynomial exponents for plastic surface (see help for function GPYS)</li>
+<li> <code>Hir</code>: isotropic hardening ratio for flexural end i and j</li>
+<li> <code>Hkr</code>: kinematic hardening ratio for axial, flexural end i and end j</li>
+<li> <code>w</code>: uniform element load ( w(1) = longitudinal, w(2) = transverse )</li>
+<li> <code>jntoff</code>: rigid joint offsets in global X and Y at element ends;</li>
+<li> <code>LdIdx</code>: load history no for element loading in x-direction</li>
+<li> <code>LdIdy</code>: load history no for element loading in y-direction</li>
+<li> <code>Wtol</code>: incremental work tolerance for state convergence</li>
+<li> <code>MaxIter</code>: maximum number of iterations for state convergence</li>
+<li> <code>SubDivNo</code>: number of element deformation subdivisions</li>
+</ul></p>
+<p><b>State</b>
+<ul>
+<div class="col-6"><img src="../img/Inel2dFrm_wLHNMYS.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionInel2dFrm_wLPPM" data-parent="#accordionInel2dFrm_wLPPM" href="#collapseInel2dFrm_wLPPM"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="Inel2dFrm_wLPPM.html">Inel2dFrm_wLPPM</a></td>
+    <td>2d frame linear elastic element perfectly plastic flexural response </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseInel2dFrm_wLPPM" class="collapse in p-3">
+<b>Parameters</b>
+<ul></p>
+<p><b>State</b>
+<ul>
+<div class="col-6"><img src="../img/Inel2dFrm_wLPPM.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionInel2dFrm_wOneComp" data-parent="#accordionInel2dFrm_wOneComp" href="#collapseInel2dFrm_wOneComp"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="Inel2dFrm_wOneComp.html">Inel2dFrm_wOneComp</a></td>
+    <td>one component 2d frame element with rigid-linear hardening end hinges </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseInel2dFrm_wOneComp" class="collapse in p-3">
+<b>Parameters</b>
+<ul>
+<li> <code>rho</code>: mass density</li>
+<li> <code>E</code>: Young's modulus</li>
+<li> <code>A</code>: cross-sectional area</li>
+<li> <code>I</code>: moment of inertia</li>
+<li> <code>Mp</code>: plastic moment capacity at end nodes i &amp; j ( Mp = [Mpi, Mpj] )</li>
+<li> <code>Hi</code>: isotropic plastic modulus</li>
+<li> <code>Hk</code>: kinematic modulus</li>
+<li> <code>w</code>: uniform element load ( w(1) = longitudinal, w(2) = transverse )</li>
+<li> <code>jntoff</code>: rigid joint offsets in global X and Y at element ends; column 1 for node i, column 2 for node j</li>
+</ul></p>
+<p><b>State</b>
+<ul>
+<div class="col-6"><img src="../img/Inel2dFrm_wOneComp.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionInel2dFrm_wTwoComp" data-parent="#accordionInel2dFrm_wTwoComp" href="#collapseInel2dFrm_wTwoComp"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="Inel2dFrm_wTwoComp.html">Inel2dFrm_wTwoComp</a></td>
+    <td>two component 2d frame element (linear + linear-perfectly plastic) </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseInel2dFrm_wTwoComp" class="collapse in p-3">
+<b>Parameters</b>
+<ul></p>
+<p><b>State</b>
+<ul>
+<div class="col-6"><img src="../img/Inel2dFrm_wTwoComp.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionLE2dFrm" data-parent="#accordionLE2dFrm" href="#collapseLE2dFrm"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="LE2dFrm.html">LE2dFrm</a></td>
+    <td>2d LE frame element under linear or nonlinear geometry </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseLE2dFrm" class="collapse in p-3">
+<b>Parameters</b>
+<ul>
+<li> <code>A</code>: cross sectional area</li>
+<li> <code>E</code>: modulus of elasticity</li>
+<li> <code>I</code>: moment of inertia</li>
+<li> <code>Mp</code>: plastic moment capacity</li>
+<li> <code>rho</code>: mass density</li>
+<li> <code>jntoff</code>: rigid joint offsets in global X and Y at element ends; column 1 for node i, column 2 for node j</li>
+</ul></p>
+<p><b>State</b>
+<ul>
+<li> <code>u</code>: vector of total element displacements in global reference</li>
+<li> <code>Du</code>: vector of element displacement increments from last convergence</li>
+<li> <code>DDu</code>: vector of element displacement increments from last iteration</li>
+<li> <code>ke</code>: element stiffness matrix in global reference; updated under ACTION = 'stif'</li>
+<li> <code>p</code>: element resisting force vector in global reference; updated under ACTION = 'stif' or 'forc'</li>
+<li> <code>Past</code>: element history variables at last converged state</li>
+<li> <code>Pres</code>: current element history variables</li>
+<li> <code>lamda</code>: row vector of current load factor(s)</li>
+</ul>
+<div class="col-6"><img src="../img/LE2dFrm.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionLE2dFrm_wPdelta" data-parent="#accordionLE2dFrm_wPdelta" href="#collapseLE2dFrm_wPdelta"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="LE2dFrm_wPdelta.html">LE2dFrm_wPdelta</a></td>
+    <td>2d linear elastic frame element with P-delta effect under linear or nonlinear geometry </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseLE2dFrm_wPdelta" class="collapse in p-3">
+<b>Parameters</b>
+<ul></p>
+<p><b>State</b>
+<ul>
+<div class="col-6"><img src="../img/LE2dFrm_wPdelta.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionHomoCircSecw1dMat" data-parent="#accordionHomoCircSecw1dMat" href="#collapseHomoCircSecw1dMat"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="HomoCircSecw1dMat.html">HomoCircSecw1dMat</a></td>
+    <td>None </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseHomoCircSecw1dMat" class="collapse in p-3">
+<b>Parameters</b>
+<ul>
+<li> <code>R(1:2)</code>: outer radius and inner radius of section (default = R(1) only)</li>
+<li> <code>nr</code>: no of integration points (fibers) over radius (default=5)(thus 2 x nr across diameter)</li>
+<li> <code>nth</code>: no of integration points (fibers) in circumferential direction (used for 3d only),(default=10)</li>
+<li> <code>Rdrat</code>: ratio of inner to outer radius for switching to uniform dicretization</li>
+<li> <code>IntTyp</code>: function name for section integration ('Midpoint' or 'Cubature')</li>
+<li> <code>MatName</code>: function name for material uniaxial stress-strain relation</li>
+<li> <code>MatData</code>: data structure with material property data</li>
+</ul></p>
+<p><b>State</b>
+<ul>
+<div class="col-6"><img src="../img/HomoCircSecw1dMat.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionHomoRectSecw1dMat" data-parent="#accordionHomoRectSecw1dMat" href="#collapseHomoRectSecw1dMat"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="HomoRectSecw1dMat.html">HomoRectSecw1dMat</a></td>
+    <td>None </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseHomoRectSecw1dMat" class="collapse in p-3">
+<b>Parameters</b>
+<ul>
+<li> <code>d</code>: section depth</li>
+<li> <code>b</code>: section width</li>
+<li> <code>ny</code>: no of integration points (fibers) in y (default = 10)</li>
+<li> <code>nz</code>: no of integration points (fibers) in z (default = 1 for 2d and 10 for 3d)</li>
+<li> <code>IntTyp</code>: function name for section integration</li>
+<li> <code>MatName</code>: function name for material uniaxial stress-strain relation</li>
+<li> <code>MatData</code>: data structure with material property data</li>
+</ul></p>
+<p><b>State</b>
+<ul>
+<li> <code>e</code>: vector of total section deformations</li>
+<li> <code>De</code>: vector of section deformation increments from last convergence</li>
+<li> <code>DDe</code>: vector of section deformation increments from last iteration</li>
+<li> <code>edot</code>: vector of section deformation rates</li>
+<li> <code>ks</code>: section stiffness matrix; returned under ACTION = 'stif'</li>
+<li> <code>s</code>: section resisting force vector; returned under ACTION = 'stif' or 'forc'</li>
+<li> <code>Past</code>: section history variables at last converged state</li>
+<li> <code>Pres</code>: current section history variables</li>
+</ul>
+<div class="col-6"><img src="../img/HomoRectSecw1dMat.png"></div></td> 
+ </tr>
+    <tr class="accordion-toggle collapsed" data-toggle="collapse" id="accordionHomoWFSecw1dMat" data-parent="#accordionHomoWFSecw1dMat" href="#collapseHomoWFSecw1dMat"><td class="expand-button"></td>
+    <td><img src="../matlabicon.gif" alt="" border="">&nbsp;<a href="HomoWFSecw1dMat.html">HomoWFSecw1dMat</a></td>
+    <td>None </td></tr><tr class="hide-table-padding"> 
+ <td></td>                   <td colspan="3">                    <div id="collapseHomoWFSecw1dMat" class="collapse in p-3">
+<b>Parameters</b>
+<ul></p>
+<p><b>State</b>
+<ul>
+<div class="col-6"><img src="../img/HomoWFSecw1dMat.png"></div></td> 
+ </tr></tbody> 
+ </table><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"               integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="             crossorigin="anonymous"></script><script><script type="math/tex">("a[id^=show_]").click(function(event) {</script>("#extra_" + $(this).attr('id').substr(5)).slideToggle("fast"); 
+ event.preventDefault();})</script></p></div>
+                    
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p> © 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a> </p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

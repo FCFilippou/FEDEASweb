@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Index - FedeasLab</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-170527070-1', 'auto');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">FedeasLab</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../quick.md" class="dropdown-item">Quick Start</a>
+</li>
+                                    
+<li>
+    <a href="../../DataStructs/" class="dropdown-item">Data Structures</a>
+</li>
+                                    
+<li>
+    <a href="../../dat/" class="dropdown-item">Schemas</a>
+</li>
+                                    
+<li>
+    <a href="../../sch/index" class="dropdown-item">Schemas-2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../api/" class="dropdown-item">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../matlib/" class="dropdown-item">Materials</a>
+</li>
+            
+<li>
+    <a href="../../elemlib/" class="dropdown-item">Elements</a>
+</li>
+            
+<li>
+    <a href="../../ModelLib/" class="dropdown-item">Modeling Library</a>
+</li>
+            
+<li>
+    <a href="../../FEDEASLab/Section_Library/FEDEASLab.md" class="dropdown-item">Section Library</a>
+</li>
+            
+<li>
+    <a href="../../FEDEASLab/Solution_Library/FEDEASLab/" class="dropdown-item">Solution Library</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Basic/FEDEASLab.md" class="dropdown-item">Basic analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Dynamics/FEDEASLab/" class="dropdown-item">Transient analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Plastic_Analysis/LimEqns_2dFrm/" class="dropdown-item">Plastic Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/General/FEDEASLab/" class="dropdown-item">Core</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../" class="nav-link">Examples</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                    
+                        <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+        
+            
+            <li class="nav-item" data-level="1"><a href="#inelasticity-in-frame-sections" class="nav-link">Inelasticity in Frame Sections</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#part-a-t-section" class="nav-link">Part A: T-Section</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#part-b-rectangular-section" class="nav-link">Part B: Rectangular Section</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#inelasticity-in-frame-members" class="nav-link">Inelasticity in Frame Members</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#concentrated-plasticity" class="nav-link">Concentrated plasticity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#distributed-inelasticity" class="nav-link">Distributed inelasticity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#nonlinear-static-analysis" class="nav-link">Nonlinear Static Analysis</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#inelastic-without-interaction" class="nav-link">Inelastic without interaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2" class="nav-link">2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#nonlinear-transient-analysis" class="nav-link">Nonlinear Transient Analysis</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#inelastic-without-interaction_1" class="nav-link">Inelastic without interaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2_1" class="nav-link">2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3" class="nav-link">3</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4_1" class="nav-link">4</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#other" class="nav-link">Other</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        
+        </ul>
+    </div>
+</div></div>
+                    
+
+                    
+                        <div class="col-md-8" role="main">
+
+<h1 id="inelasticity-in-frame-sections">Inelasticity in Frame Sections</h1>
+<p>In this section, the response of a nonlinear cross section is analyzed,
+which is assumed to represent a thin slice of a frame member, for which
+fiber strains can be considered constant.</p>
+<h2 id="part-a-t-section">Part A: T-Section</h2>
+<pre><code class="matlab">Output = Hw12P1A(nft, nwl, SIntTyp, Hk, yc, N_Np, Tmax, LoadOpt)
+</code></pre>
+
+<h3 id="solution-stability-under-perfect-plasticity">Solution stability under perfect plasticity</h3>
+<p><img alt="Figure 1: Moment-curvature response with minimal
+hardening.\label{mc1}{=tex}" src="docs/img/p1/moment-curvature-1.png" />{#fig:mc1}</p>
+<p>fig. 1 presents the moment-curvature response for the first two cases,
+which utilize perfectly-pastic and effectively plastic (<script type="math/tex">H_k = 10^{-9}</script>)
+materials, respectively. Additionally, this figure tracks the movement
+of the neutral axis location throughout the moment curvature analysis
+for runs <code>\ref{run:P1-0}</code>{=tex} and <code>\ref{run:P1-1}</code>{=tex}. At each load
+step, this location is calculated according to the following relation:</p>
+<p>
+<script type="math/tex; mode=display">y_{NA} = \dfrac{\epsilon_{ref, i}}{\kappa_i} - y_{ref}</script>
+</p>
+<p>Where <script type="math/tex">\epsilon_{ref, i}</script> is the axial strain measured at the current
+reference axis location, <script type="math/tex">y_{ref}</script>.</p>
+<h3 id="effects-of-axial-force">Effects of axial force</h3>
+<p><img alt="" src="docs/img/p1/moment-curvature-2.pdf" /></p>
+<h3 id="cyclic-loading">Cyclic loading</h3>
+<h3 id="4">4</h3>
+<p><img alt="" src="docs/img/p1/moment-curvature-4.png" />{#fig:mc4}</p>
+<h3 id="5">5</h3>
+<p><img alt="" src="docs/img/p1/moment-curvature-5.png" />{#fig:mc5}</p>
+<h3 id="6">6</h3>
+<p><img alt="Cyclic response." src="docs/img/p1/moment-curvature-6.png" /></p>
+<p><img alt="" src="docs/img/p1/n-m-all.png" /></p>
+<p><img alt="" src="docs/img/p1/strain-curvature.png" /></p>
+<h2 id="part-b-rectangular-section">Part B: Rectangular Section</h2>
+<p>This problem was used to study some possible applications of automatic
+differentiation to inelastic section analysis. Using a differentiable
+programming framework, a return-mapping algorithm was implemented which
+accounts for linear or nonlinear isotropic hardening, and basic
+kinematic hardening. This algorithm is called to evaluate cross
+sectional forces for a given strain distribution, and this procedure is
+differentiated with forward-mode automatic differentiation to yield the
+tangent stiffness of the cross section.</p>
+<p><img alt="Plastic limit surface for various integration rules." src="docs/img/p1/B-1-1-40.png" /></p>
+<p>plastic surface</p>
+<h3 id="experiment-i-o-a-b-o">Experiment I: O-A-B-O</h3>
+<p><img alt="Stress and strain distributions over the loading history of experiment I." src="docs/img/p1/B-3-stress-strain-1-4.png" /></p>
+<p><img alt="" src="docs/img/p1/limit-quad-4.png" />{width="60%," height="60%"}</p>
+<p><img alt="Section response to load history O-A-B-O" src="docs/img/p1/stress-hist-3d-4-4.png" />{width="60%," height="60%"}</p>
+<p><img alt="Strain and stiffness history for load path O-A-B-O" src="docs/img/p1/strain-stiffness-1-4.png" />{#fig:ssh-oabo}</p>
+<p><img alt="Final state of cross section after experiment I." src="docs/img/p1/final-state-1-4.png" /></p>
+<h3 id="experiment-ii-o-a-b-c-o">Experiment II: O-A-B-C-O</h3>
+<p><img alt="Loadpath O-A-B-C-O" src="docs/img/p1/limit-quad4-4.png" />{width="60%,"
+height="60%"}</p>
+<p><img alt="Section response to load history O-A-B-C-O" src="docs/img/p1/stress-hist-3d-4-4-4.png" />{width=60%,height="60%"}</p>
+<p><img alt="Strain and stiffness history for load path O-A-B-O" src="docs/img/p1/strain-stiffness-1-4.png" /></p>
+<p><img alt="Strain and stiffness history for load path O-A-B-C-O" src="docs/img/p1/strain-stiffness-2-4.png" />{#fig:ssh-oabco}</p>
+<h1 id="inelasticity-in-frame-members">Inelasticity in Frame Members</h1>
+<pre><code class="matlab">Output = Hw12P2A( Elem,     Hkr ,          )
+Output = Hw12P2B( EIntType, Hkr, SIntTyp,nfl,nwl,nIP)
+</code></pre>
+
+<h2 id="concentrated-plasticity">Concentrated plasticity</h2>
+<p><img alt="Figure 1: Response of two concentrated plasticity elements. The time taken to complete each analysis is shown in the legend" src="docs/img/p2/force-displ-1.png" />{#fig:cpcol}</p>
+<p>The cyclic response of two concentrated plasticity elements is compared
+in fig. 1. Under the conditions of this analysis, the <code>LHNMYS</code> element
+appears to very closely approximate the true plastic limit capacity of
+the cross section, shown in red in fig. 1 (a). However, it should be
+noted that the "exact" surface which is depicted here is only
+representative of a single cross section slice, and not neccessarily the
+full column. The lack of any axial-moment interaction in the <code>OneComp</code>
+element is very evident in from plots.</p>
+<p>The additional computational time required by the <code>LHNMYS</code> element
+appears to be considerable, but it remains to be seen how this time
+demand will scale to larger models.</p>
+<h2 id="distributed-inelasticity">Distributed inelasticity</h2>
+<p><img alt="\label{fig:col-2}{=tex}" src="docs/img/p2/force-displ-2.png" /></p>
+<p><img alt="Response of the Dinel2dFrm element for various integration schemes." src="docs/img/p2/axial-moment-full.png" /></p>
+<p><img alt="" src="docs/img/p2/force-displ-2.png" /></p>
+<h1 id="nonlinear-static-analysis">Nonlinear Static Analysis</h1>
+<p>A nonlinear static analysis of an 8-story framed structure is performed
+useing a function with the following handle:</p>
+<pre><code class="matlab">Output = Hw12P3(Geom, Column, Dlam0, nostep, Hkr)
+</code></pre>
+
+<p>In this function, <code>Geom</code> specifies the frame element geometric stiffness
+(<code>linear</code>, <code>PDelta</code> or <code>corotational</code>). The argument <code>Column</code> is used to
+specify the finite element formulation used in the vertical elements of
+the model. For the purpose of this study, and that of
+sec. <strong>¿sec:4-nta?</strong> <code>\ref{sec:4-nta}</code>{=tex} ,all girders are modeled
+using the <code>Inel2dFrm_wOneComp</code> formulation.</p>
+<h2 id="inelastic-without-interaction">Inelastic without interaction</h2>
+<p><img alt="Figure 1: Pushover curve for simple inelastic frame model." src="docs/img/p3/lambda-roof-1.png" />{#fig:lr1}</p>
+<p>The pushover curves for two cases are presented in fig. 1, which
+consider two different concentrated plasticity elements. The zoomed
+field indicates that the curves are essentially identical.</p>
+<h2 id="2">2</h2>
+<p><img alt="" src="docs/img/p3/lambda-roof-2.png" /></p>
+<p>The pushover curves for all prescribed transient analysis cases are
+presented above. The legend indicates the element name, along with the
+length of time required by the analysis to conclude.</p>
+<h1 id="nonlinear-transient-analysis">Nonlinear Transient Analysis</h1>
+<pre><code class="matlab">[output,Model] = Hw12P4(Geom, Column, Factor)
+</code></pre>
+
+<h2 id="inelastic-without-interaction_1">Inelastic without interaction</h2>
+<p><img alt="Axial force-moment history at base columns.\label{fig:c1-1}{=tex}" src="docs/img/p4/c1-1.png" /></p>
+<h2 id="2_1">2</h2>
+<p><img alt="Axial force-moment history at base columns - Second Analysis.\label{fig:c1-2}{=tex}" src="docs/img/p4/c1-2.png" /></p>
+<h2 id="3">3</h2>
+<p><img alt="Axial force-moment history at base columns - Third Analysis.\label{fig:c1-3}{=tex}" src="docs/img/p4/c1-3.png" /></p>
+<h2 id="4_1">4</h2>
+<h2 id="other">Other</h2>
+<p><img alt="Ground motion with superposed husid plot" src="docs/img/p4/ground-motion.png" /></p></div>
+                    
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p> © 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a> </p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

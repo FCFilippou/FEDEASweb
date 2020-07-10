@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Get_ModelScale</title>
+  <meta name="keywords" content="Get_ModelScale">
+  <meta name="description" content="GET_MODELSCALE determines maximum and minimum element length in Model">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../FEDEASLab.html">Home</a> &gt;  <a href="../FEDEASLab.html">Utilities</a> &gt; <a href="FEDEASLab.html">Plotting</a> &gt; Get_ModelScale.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../FEDEASLab.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities\Plotting&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>Get_ModelScale
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>GET_MODELSCALE determines maximum and minimum element length in Model</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function [ModSc,maxL,minL] = Get_ModelScale (Model,Ratio) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment">GET_MODELSCALE determines maximum and minimum element length in Model
+  [MODSC,MAXL,MINL] = GET_MODELSCALE(MODEL,RATIO)
+  the function determines a critical scale for the structural model
+  in data structure MODEL from the maximum distance MAXL and
+  the minimum distance MINL between nodes i and j of line elements;
+  the maximum distance MAXL is divided by RATIO (default = 1.5-0.5*MINL/MAXL);
+  depending on the value of RATIO the model scale is equal
+  to the largest (RATIO&lt;MAXL/MINL) or smallest distance (RATIO&gt;MAXL/MINL)</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Label_Model.html" class="code" title="function Label_Model (Model,LblOpt)">Label_Model</a>	LABEL_MODEL displays element and node numbers and global axes in the current window</li><li><a href="Plot_2dCurvDistr.html" class="code" title="function Plot_2dCurvDistr (Model,ElemData,Post,ElemList,UserScale)">Plot_2dCurvDistr</a>	PLOT_2dCURVDISTR plot curvature distribution of 2d linear elastic frame elements</li><li><a href="Plot_2dMomntDistr.html" class="code" title="function Plot_2dMomntDistr (Model,ElemData,Post,ElemList,UserScale)">Plot_2dMomntDistr</a>	PLOT_2dMOMNTDISTR plots moment distribution for 2d frame elements in current window</li><li><a href="Plot_AxialForces.html" class="code" title="function Plot_AxialForces (Model,Post,ElemList,UserScale)">Plot_AxialForces</a>	PLOT_AXIALFORCES plot axial forces in current window</li><li><a href="Plot_DeformedStructure.html" class="code" title="function Plot_DeformedStructure (Model,ElemData,U,Post,PlotOpt)">Plot_DeformedStructure</a>	PLOT_DEFORMEDSTRUCTURE plot deformed shape of the structure</li><li><a href="Plot_ElemLoading.html" class="code" title="function Plot_ElemLoading (Model,ElemData,PlotOpt)">Plot_ElemLoading</a>	PLOT_ELEMLOADING display element loading in current window</li><li><a href="Plot_IPVarDistr.html" class="code" title="function Plot_IPVarDistr (Model,ElemData,Post,Component,ElemList,UserScale)">Plot_IPVarDistr</a>	PLOT_IPVARDISTR plots distribution of integration point variables of elements with sections</li><li><a href="Plot_Model.html" class="code" title="function Plot_Model (Model,U,MPlOpt)">Plot_Model</a>	PLOT_MODEL plots the original or deformed geometry of the structural model</li><li><a href="Plot_NodalForces.html" class="code" title="function Plot_NodalForces (Model,Loading,PlotOpt)">Plot_NodalForces</a>	PLOT_NODALFORCES display nodal forces in current window</li><li><a href="Plot_OpenPlasticHinges.html" class="code" title="function Plot_OpenPlasticHinges (Model,ElemData,Post,PlotOpt)">Plot_OpenPlasticHinges</a>	PLOT_OPENPLASTICHINGES display plastic hinge locations in original or deformed configuration</li><li><a href="Plot_PlasticHinges.html" class="code" title="function Plot_PlasticHinges (Model,ElemData,U,Post,PlotOpt)">Plot_PlasticHinges</a>	PLOT_PLASTICHINGES display plastic hinge locations in current window</li><li><a href="Plot_Releases.html" class="code" title="function Plot_Releases (Model,ElemData,U,PlotOpt)">Plot_Releases</a>	PLOT_RELEASES display element releases in current window</li></ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

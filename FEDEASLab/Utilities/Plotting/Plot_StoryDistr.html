@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Plot_StoryDistr</title>
+  <meta name="keywords" content="Plot_StoryDistr">
+  <meta name="description" content="PLOT_STORYDISTR plots all columns of array XP against the row index">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../FEDEASLab.html">Home</a> &gt;  <a href="../FEDEASLab.html">Utilities</a> &gt; <a href="FEDEASLab.html">Plotting</a> &gt; Plot_StoryDistr.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../FEDEASLab.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities\Plotting&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>Plot_StoryDistr
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>PLOT_STORYDISTR plots all columns of array XP against the row index</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function AxHndl = Plot_StoryDistr (Xp,PlotOpt) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment">PLOT_STORYDISTR plots all columns of array XP against the row index
+  AXHNDL = PLOT_STORYDISTR (XP,PLOTOPT)
+  the function plots in the current window all columns of the array XP against the row index
+  which is supposed to correspond to the story number and returns the axis handle in AXHNDL;
+  the optional argument PLOTOPT is a structure with the following fields:
+  PLOTOPT.LnWth : line width             for plot   (default = 2)
+         .LnStl  : line style sequence   for plot   (default = {'-','--',':','-.',':','--'} )
+         .LnClr  : color      sequence   for plot   (default = {'b','r','k','b','r','k'} ) 
+         .MrkSz  : marker size           for plot   (default = 3)
+         .MrkClr : marker color sequence for plot   (default = {'b','r','k','b','r','k'} )
+         .MrkTyp : marker type sequence  for plot   (default = {'o','s','d','p','+','*'} )
+         .NoXTk  : number of tick marks on X-axis (default = 5 including end points)
+         .NoYTk  : number of tick marks on Y-axis (default = 5 including end points)
+         .FntSz  : font size for plot elements    (default = 30)
+         .XLbl   : character variable for X-Label (default = 'X-data')
+         .YLbl   : character variable for Y-Label (default = 'X-data')
+         .Legnd  : cell array of characters for plot legend (default: 1.Data, 2.Data, etc)</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Draw_AxisCross.html" class="code" title="function Draw_AxisCross (Xlim,Ylim,PlotOpt)">Draw_AxisCross</a>	DRAW_AXISCROSS draw cross through the axes origin of the x-y data</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

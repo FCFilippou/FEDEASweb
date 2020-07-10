@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Yield surface evolution - FedeasLab</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-170527070-1', 'auto');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">FedeasLab</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../quick.md" class="dropdown-item">Quick Start</a>
+</li>
+                                    
+<li>
+    <a href="../../DataStructs/" class="dropdown-item">Data Structures</a>
+</li>
+                                    
+<li>
+    <a href="../../dat/" class="dropdown-item">Schemas</a>
+</li>
+                                    
+<li>
+    <a href="../../sch/index" class="dropdown-item">Schemas-2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../api/" class="dropdown-item">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../matlib/" class="dropdown-item">Materials</a>
+</li>
+            
+<li>
+    <a href="../../elemlib/" class="dropdown-item">Elements</a>
+</li>
+            
+<li>
+    <a href="../../ModelLib/" class="dropdown-item">Modeling Library</a>
+</li>
+            
+<li>
+    <a href="../../FEDEASLab/Section_Library/FEDEASLab.md" class="dropdown-item">Section Library</a>
+</li>
+            
+<li>
+    <a href="../../FEDEASLab/Solution_Library/FEDEASLab/" class="dropdown-item">Solution Library</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Basic/FEDEASLab.md" class="dropdown-item">Basic analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Dynamics/FEDEASLab/" class="dropdown-item">Transient analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/Plastic_Analysis/LimEqns_2dFrm/" class="dropdown-item">Plastic Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../FEDEASLab/General/FEDEASLab/" class="dropdown-item">Core</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../" class="nav-link">Examples</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                    
+                        <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+        
+            
+            <li class="nav-item" data-level="1"><a href="#yield-surface-evolution" class="nav-link">Yield Surface Evolution</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#formulation" class="nav-link">Formulation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#implementation" class="nav-link">Implementation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#examples" class="nav-link">Examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#source-code" class="nav-link">Source Code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        
+        </ul>
+    </div>
+</div></div>
+                    
+
+                    
+                        <div class="col-md-8" role="main">
+
+<h1 id="yield-surface-evolution">Yield Surface Evolution</h1>
+<p>This note explores how the yield surface of certain cross sections evolve as they undergo combined flexural and axial loading into the inelastic range. The scope of the discussion is limited by the following assumptions:</p>
+<ol>
+<li>Shear interaction is negligible.</li>
+<li>Planar sections remain plane under deformation.</li>
+<li>For doubly symmetric sections, flexure occurs about a principal axis.</li>
+<li>For singly symmetric sections, flexure occurs about the asymmetric principal axis.</li>
+</ol>
+<p>An implementation is developed and examples are presented for a perfectly plastic rectangular homogeneous section, but the generalization of this case is relatively straight forward.</p>
+<h2 id="formulation">Formulation</h2>
+<p>We seek to define a surface, <script type="math/tex">F_\tau</script>, at instant <script type="math/tex">\tau</script> by the following set of moment-axial force ordered pairs:</p>
+<p>
+<script type="math/tex; mode=display">
+\{ \left( M, P \right) \in \mathbb{R} \times \mathbb{R} \mid \Phi(M,P) \}
+</script>
+</p>
+<p>where <script type="math/tex">\Phi</script> is satisfied when <script type="math/tex">M</script> and <script type="math/tex">P</script> are resultants of a stress distribution, <script type="math/tex">\sigma</script>, meeting the condition <script type="math/tex">(\exists \mathbf{x} \in \Omega ) [\sigma ( \mathbf{x} ) = \sigma_{y, \tau }(\mathbf{x})]</script> for material behavior with only one component. In this condition, <script type="math/tex">\mathbf{x} \in \Omega</script> denotes a point in the cross section, and <script type="math/tex">\sigma_{y,\tau}</script> is the limit stress at time <script type="math/tex">\tau</script>.</p>
+<p>For the case of perfect plasticity without hardening, the dependence of <script type="math/tex">\sigma_y</script> on <script type="math/tex">\mathbf{x}</script> and <script type="math/tex">\tau</script> is dropped. Additionally, for a singly symmetric homogenous section obeying the assumptions stated above, the stress and strain fields are constant along the flexural axis. After discretizing such a cross section into <script type="math/tex">n_{IP}</script> integration points, the aforementioned condition is restated approximately as follows:</p>
+<p>
+<script type="math/tex; mode=display">
+\Phi(M,P) \implies \exists i \in N \mid \sigma(x_i) = \sigma_y 
+</script>
+</p>
+<p>where N is the set of integration point indices <script type="math/tex">\{i \in\mathbb{Z}^+ \mid i \le n_{IP} \}</script> and <script type="math/tex">x_i</script> is a scalar distance orthogonal to the flexural axis.</p>
+<p>The discrete problem may then be stated as follows:</p>
+<blockquote>
+<p>Given a vector, <script type="math/tex">\hat{\mathbf{x}}</script>, of <script type="math/tex">n_{IP}</script> integration point locations, and a vector of corresponding stresses, <script type="math/tex">\mathbf{y}_\tau</script> at instant <script type="math/tex">\tau</script>, find the following set, <script type="math/tex">Y</script>, of admissible stress vectors, <script type="math/tex">\mathbf{y}</script>:</p>
+<p>
+<script type="math/tex; mode=display">Y_\tau = \{ \mathbf{y} \in \mathbb{R}^{n_{IP}} \mid (\exists a \in \mathbb{R})(\exists m \in \mathbb{R})[\mathbf{y} - \mathbf{y}_\tau = a + m\hat{\mathbf{x}}] \text{ and } (\exists i \in N)[ y_i = \sigma_y ]\}</script>
+</p>
+<p>which is the set of all discrete stress vectors, <script type="math/tex">\mathbf{y}</script>, such that there exists an admissible strain increment <script type="math/tex">\Delta \varepsilon = \Delta\varepsilon_a + \Delta\kappa \mathbf{x}</script> which will produce the elastic stress increment <script type="math/tex">\mathbf{y} - \mathbf{y}_\tau = E \Delta\varepsilon</script>, and there exists an element, <script type="math/tex">y_i</script>, in <script type="math/tex">\mathbf{y}</script> that is equal to the limit stress.
+</p>
+</blockquote>
+<p>Unlike similar discrete approximations of the <strong>plastic</strong> limit surface, the accuracy of this approximation for the <strong>elastic</strong> limit surface is dependent on the loading history. Furthermore, this dependence is very difficult to predict as it is related to the distance between integration points and extrema in the residual stress field.</p>
+<h2 id="implementation">Implementation</h2>
+<p>The implementation of this problem is divided into two functions, <code>plot_evol</code> and <code>lim_clip</code>. The former is a wrapper to the latter. <code>plot_evol</code> extracts the section state and other parameters from the standard <code>FEDEASLab</code> data structures and normalizes the residual stress oridinates before calling <code>lim_clip</code>.</p>
+<p>The function <code>lim_clip</code> is formulated in terms of an arbitrary set of abscisssas and ordinates, which are supplied to the argument <code>XY</code> as an array of size <script type="math/tex">(n_{IP},2)</script>. Each ordinate, <code>XY(i,2)</code>, corresponds to the stress <script type="math/tex">y_i \in \mathbf{y}_\tau</script> at integration point, <code>i</code>. The values supplied in <code>XY</code> should be normalized such that the codomain, <code>XY(:,2)</code>,  is the interval <script type="math/tex">[+1, -1]</script>. The function iterates over every integration point in the set <script type="math/tex">N</script>, carrying out 4 separate nested iterations over the remaining integration points indices, <script type="math/tex">\{ j \in\mathbb{Z}^+ \mid j \le n_{IP}, j \ne i\}</script>.  This is a very computationally expensive procedure that grows quickly with <script type="math/tex">n_{IP}</script>. The return variable, <code>Y_lim</code>, is a subset of the piecewise continuous set <script type="math/tex">Y_\tau</script> with column vectors <code>Y_lim(:,k)</code> defining points of discontinuity.</p>
+<h2 id="examples">Examples</h2>
+<p>The function <code>plot_evol</code> is used in these examples to produce a figure with two plots. The plot on the left shows the normalized stress vectors <script type="math/tex">y_k</script> (also <code>Y_lim(:,k)</code>) that correspond to points in the normalized resultant plot on the right. It should be noted, however, that the stress distribution corresponding to the <em>current</em> stress distribution is not shown.</p>
+<p>Examples are executed using the following Matlab script:</p>
+<script src="https://gist.github.com/claudioperez/c6e9c9f108fe3706ef18aecd6984444a.js?file=surf_ex_2.m"></script>
+
+<p>```{include=surf_ex_2.m .matlab}</p>
+<p>```</p>
+<h3 id="example-1-path-o-a-b-o-loadopt3">Example 1 - Path O-A-B-O' (<code>LoadOpt=3</code>)</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6aVvPM5A2-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- ![Point A, 30 integration points.](./oabo-a-30.png)
+
+![Point B, 30 integration points.](./oabo-b-30.png)
+
+![Point O', 30 integration points.](./oabo-o-30.png) -->
+
+<h3 id="example-2-path-o-a-b-c-o-loadopt4">Example 2 - Path O-A-B-C-O' (<code>LoadOpt=4</code>)</h3>
+<p>This example is identical to the previous up to point B, after which unloading occurs under a constant moment up to point C.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x0eixejN0IQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- ![Point C, 30 integration points.](./oabco-c-30.png)
+
+![Point O', 30 integration points.](./oabco-o-30.png) -->
+
+<h2 id="source-code">Source Code</h2>
+<h3 id="lim_clip"><code>lim_clip</code></h3>
+<script src="https://gist.github.com/claudioperez/c6e9c9f108fe3706ef18aecd6984444a.js?file=lim_clip.m"></script>
+
+<!-- ``` {include=lim_clip.m .matlab}
+
+``` -->
+
+<h3 id="plot_evol"><code>plot_evol</code></h3>
+<script src="https://gist.github.com/claudioperez/c6e9c9f108fe3706ef18aecd6984444a.js?file=plot_evol.m"></script></div>
+                    
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p> © 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a> </p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
