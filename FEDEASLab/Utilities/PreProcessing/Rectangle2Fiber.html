@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Rectangle2Fiber</title>
+  <meta name="keywords" content="Rectangle2Fiber">
+  <meta name="description" content="RECTANGLE2FIBER integration points and weights for 2d-integration of a rectangle">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../FEDEASLab.html">Home</a> &gt;  <a href="../FEDEASLab.html">Utilities</a> &gt; <a href="FEDEASLab.html">PreProcessing</a> &gt; Rectangle2Fiber.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../FEDEASLab.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities\PreProcessing&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>Rectangle2Fiber
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>RECTANGLE2FIBER integration points and weights for 2d-integration of a rectangle</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function [yfib,zfib,wfib] = Rectangle2Fiber (patcoor,IntTyp,nyfib,nzfib) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment">RECTANGLE2FIBER integration points and weights for 2d-integration of a rectangle
+  [YFIB,ZFIB,WFIB] = RECTANGLE2FIBER (PATCOOR,INTTYP,NYFIB,NZFIB)
+  the function determines the locations in vectors YFIB and ZFIB and the integration weights
+  in vector WFIB for the 2d integration of a rectangle with the integration scheme
+  in character array INTTYP and the number of integration points in the y-direction in NYFIB
+  and in the z-direction in NZFIB, respectively;
+  the geometry of the rectangle is supplied by specifying the
+  coordinates of opposite corners in array PATCOOR [ y1 z1 (top left); y2 z2 (bottom right)]
+  (NOTE: right handed local coordinate system x-y-z!)
+  INTTYP can be either 'Midpoint', 'Gauss', Lobatto' or 'Trap'</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Create_IPMesh4MultRectShape.html" class="code" title="function Shape = Create_IPMesh4MultRectShape (Shape,MeshData)">Create_IPMesh4MultRectShape</a>	CREATE_IPMESH4MULTRECTSHAPE fiber discretization for section of several rectangular patches</li><li><a href="Create_IPMesh4Rect.html" class="code" title="function [yfib,zfib,wfib,MatID] = Create_IPMesh4Rect (SecData)">Create_IPMesh4Rect</a>	CREATE_IPMESH4RECT coordinates, weights and material IDs for rectangular section with cover</li><li><a href="Create_IPMesh4WFShape.html" class="code" title="function [yfib,zfib,wfib,MatID] = Create_IPMesh4WFShape (SecData)">Create_IPMesh4WFShape</a>	CREATE_IPMESH4WFSHAPE coordinates, weights and material IDs for wide flange section</li></ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

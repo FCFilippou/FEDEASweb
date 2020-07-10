@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of BilinInel1dMat</title>
+  <meta name="keywords" content="BilinInel1dMat">
+  <meta name="description" content="BILININEL1dMAT uniaxial stress-strain relation for bilinear inelastic material">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../FEDEASLab.html">Home</a> &gt;  <a href="FEDEASLab.html">Material_Library</a> &gt; BilinInel1dMat.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../FEDEASLab.html"><img alt="<" border="0" src="../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Material_Library&nbsp;<img alt=">" border="0" src="../right.png"></a></td></tr></table>-->
+
+<h1>BilinInel1dMat
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>BILININEL1dMAT uniaxial stress-strain relation for bilinear inelastic material</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>function MatResp = BilinInel1dMat (action,MatNo,MatData,MatState) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="fragment"><pre class="comment">BILININEL1dMAT uniaxial stress-strain relation for bilinear inelastic material    
+  MATRESP = BILININEL1dMAT (ACTION,MATNO,MATDATA,MATSTATE)
+  function determines the uniaxial stress-strain relation for  bilinear inelastic material
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  the character variable ACTION should have one of the following values
+  ACTION = 'chec' function checks material property data for omissions and returns default values in MATDATA
+           'init' function returns the material history variables in MATSTATE
+           'forc' function returns the material stress (tensor) in MATSTATE
+           'stif' function returns the material tangent modulus and the stress (tensor) in MATSTATE
+           'post' function returns data structure MATPOST with post-processing information
+  depending on the value of character variable ACTION the function returns information in data structure MATRESP
+  for the material with number MAT_NO; data structure MATDATA supplies the material property data
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  data structure MATRESP stands for one of the following data objects depending on value of ACTION 
+  MATRESP = MATDATA   for action = 'chec'
+  MATRESP = MATSTATE  for action = 'init'
+  MATRESP = MATSTATE  for action = 'stif'
+  MATRESP = MATSTATE  for action = 'forc'
+  MATRESP = MATPOST   for action = 'post'
+  MATRESP is empty    for unsupported keywords
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  MATSTATE is a data structure with information about the current material state in fields
+         eps    = total strain (tensor for 2d or 3d)
+         Deps   = strain increments from last convergence
+         DDeps  = strain increments from last iteration
+         epsdot = strain rate (tensor for 2d or 3d)
+         km     = material stiffness matrix; returned under ACTION = 'stif'
+         sig    = stress (tensor for 2d or 3d); returned under ACTION = 'stif' or 'forc'
+         Past   = material history variables at last converged state
+         Pres   = current values of material history variables
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  MATDATA is a data structure with material property information; it has the fields
+         E  = initial modulus
+         fy = yield strength
+         Eh = post-yield modulus
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  MATPOST is a data structure with material response information for post-processing in fields
+         eps = total strain
+         sig = uniaxial stress</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

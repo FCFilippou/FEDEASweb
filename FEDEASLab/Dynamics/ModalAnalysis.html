@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of ModalAnalysis</title>
+  <meta name="keywords" content="ModalAnalysis">
+  <meta name="description" content="MODALANALYSIS determines modal response history for given transient loading">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../FEDEASLab.html">Home</a> &gt;  <a href="FEDEASLab.html">Dynamics</a> &gt; ModalAnalysis.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../FEDEASLab.html"><img alt="<" border="0" src="../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Dynamics&nbsp;<img alt=">" border="0" src="../right.png"></a></td></tr></table>-->
+
+<h1>ModalAnalysis
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>MODALANALYSIS determines modal response history for given transient loading</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>function [omega,Ueig,Y_t,Ydot_t,Yddot_t] = ModalAnalysis (option,Kf,M,Loading,Deltat,zeta,nmod) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="fragment"><pre class="comment">MODALANALYSIS determines modal response history for given transient loading
+  [OMEGA,UEIG,Y_T,YDOT_T,YDDOT_T] = MODALANALYSIS (OPTION,KF,M,LOADING,DELTAT,ZETA,NMOD)
+  the function determines the response history of a multi-dof structural model
+  with stiffness matrix at free dofs KF and consistent mass matrix or lumped mass vector M
+  under given transient loading in data structure LOADING
+  for the lowest NMOD (default=all) eigenmodes or NMOD Ritz vectors
+  with damping ratios in row vector ZETA (default=0);
+  the time step of integration is DELTAT;
+        OPTION = 'eig'  uses nmod eigenvectors,
+  while OPTION = 'Ritz' uses nmod Ritz vectors in the modal analysis; 
+  the function returns NMOD eigenfrequencies of the structural model in row vector OMEGA,
+  the eigenmode or Ritz vector shapes in array UEIG arranged columnwise (column no=mode no),
+  and the response history of each eigenmode or Ritz vector
+  in array Y_T arranged columnwise (column no=mode no),
+  the velocity history of each eigenmode or Ritz vector in array YDOT_t, and
+  the acceleration history of each eigenmode or Ritz vector in array YDDOT_t
+  the data structure LOADING has the following fields
+  LOADING.Uddref = vector of reference acceleration values at model dofs
+          Pref   = vector of reference load         values at model dofs
+          U0     = vector of initial displacement   values at model dofs
+          Udot0  = vector of initial velocity       values at model dofs
+          FrcHst = force time history in field Value
+          AccHst = acceleration time history in field Value</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../matlabicon.gif)">
+<li><a href="EigenMode.html" class="code" title="function [omega,Ueig] = EigenMode (Kf,M,nmod)">EigenMode</a>	EIGENMODE determines eigenfrequencies and eigenmodes of structural model</li><li><a href="LSDOF_LinearWilson.html" class="code" title="function [u,udot,uddot] = LSDOF_LinearWilson (Deltat,omega,p,zeta,u0,udot0)">LSDOF_LinearWilson</a>	LSDOF_LINEARWILSON transient response of linear SDOF system by exact integration of piecewise linear excitation</li><li><a href="ModeDecomposition.html" class="code" title="function [Mmod,Ymod,Vmod] = ModeDecomposition (M,Ueig,V)">ModeDecomposition</a>	MODEDECOMPOSITION determines eigenmode participation factors of given vector V</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

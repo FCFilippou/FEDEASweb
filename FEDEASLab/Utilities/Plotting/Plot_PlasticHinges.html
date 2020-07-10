@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Plot_PlasticHinges</title>
+  <meta name="keywords" content="Plot_PlasticHinges">
+  <meta name="description" content="PLOT_PLASTICHINGES display plastic hinge locations in current window">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../FEDEASLab.html">Home</a> &gt;  <a href="../FEDEASLab.html">Utilities</a> &gt; <a href="FEDEASLab.html">Plotting</a> &gt; Plot_PlasticHinges.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../FEDEASLab.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities\Plotting&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>Plot_PlasticHinges
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>PLOT_PLASTICHINGES display plastic hinge locations in current window</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function Plot_PlasticHinges (Model,ElemData,U,Post,PlotOpt) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment">PLOT_PLASTICHINGES display plastic hinge locations in current window
+  PLOT_PLASTICHINGES (MODEL,ELEMDATA,U,POST,PLOTOPT)
+  the function displays in the current window the plastic hinge locations
+  for the elements of the structural model in data structure MODEL (only 2d models for now).
+  There are two options for supplying the plastic capacities and basic force values:
+      (a) ELEMDATA is a vector of plastic capacities and 
+  or, (b) ELEMDATA is a cell array with the plastic capacities in fields Np for the axial,
+          and Mp for the flexural capacity.
+  In the presence of the global dof displacements U the plastic hinges are displayed
+  in the deformed configuration otherwise in the undeformed.
+  There are three options for POST:
+      (a) POST is the vector of basic forces Q corresponding to case (a) of ELEMDATA 
+      (b) POST is the vector of plastic deformation increments DVPL in which case
+          ELEMDATA is either empty or a character variable with the N-M interaction option NMOPT;
+          NMOPT can be one of three options: 'None' (default), 'Dmnd' or 'AISC';
+      (c) POST is a cell array with post-processing information in the fields of POST.ELEM{el}.
+  PLOTOPT is an optional data structure controlling the display;
+  in its absense the function displays the plastic hinges with default properties;
+  PLOTOPT has the following fields:
+    EList: list of elements for which plastic hinges are displayed (default all elements)
+    HngSF: scale factor for size of plastic hinge symbol                  (default = 1)
+    HOfSF: factor for offset of the plastic hinge symbol from element end (default = 1)  
+    FHClr: color for flexural hinges                                      (default='r')
+    CHClr: color for column hinges with N-M interaction               (default = [1 0.6 0])
+    AHClr: color for axial hinges in truss elements                   (default = [1 0.6 0])
+    tol:   relative tolerance for plastic capacity check;
+           absolute tolerance for plastic rotation check              (default=1e-6)</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Get_ModelScale.html" class="code" title="function [ModSc,maxL,minL] = Get_ModelScale (Model,Ratio)">Get_ModelScale</a>	GET_MODELSCALE determines maximum and minimum element length in Model</li><li><a href="Plot_Hinge4Elem.html" class="code" title="function Plot_Hinge4Elem (nq,HngId,AxHngCoor,FlHngCoor,Colors)">Plot_Hinge4Elem</a>	PLOT_HINGE4ELEM plot releases or plastic hinges for truss or frame element</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Animate_EventSequence.html" class="code" title="function Animate_EventSequence (Model,ElemData,Ufh,Qh,PlotOpt)">Animate_EventSequence</a>	ANIMATE_EVENTSEQUENCE generate plot sequence with location of plastic hinges for each event</li><li><a href="Animate_ResponsewHngHist.html" class="code" title="function Animate_ResponsewHngHist (Model,ElemData,Post,PlotOpt)">Animate_ResponsewHngHist</a>	ANIMATE_RESPONSEwHNGHIST interactive or recorded response and plastic hinge history</li></ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

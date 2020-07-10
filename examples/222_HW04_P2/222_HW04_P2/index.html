@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Problem 2 - FedeasLab</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-170527070-1', 'auto');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">FedeasLab</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../quick.md" class="dropdown-item">Quick Start</a>
+</li>
+                                    
+<li>
+    <a href="../../../DataStructs/" class="dropdown-item">Data Structures</a>
+</li>
+                                    
+<li>
+    <a href="../../../dat/" class="dropdown-item">Schemas</a>
+</li>
+                                    
+<li>
+    <a href="../../../sch/index" class="dropdown-item">Schemas-2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../api/" class="dropdown-item">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../matlib/" class="dropdown-item">Materials</a>
+</li>
+            
+<li>
+    <a href="../../../elemlib/" class="dropdown-item">Elements</a>
+</li>
+            
+<li>
+    <a href="../../../ModelLib/" class="dropdown-item">Modeling Library</a>
+</li>
+            
+<li>
+    <a href="../../../FEDEASLab/Section_Library/FEDEASLab.md" class="dropdown-item">Section Library</a>
+</li>
+            
+<li>
+    <a href="../../../FEDEASLab/Solution_Library/FEDEASLab/" class="dropdown-item">Solution Library</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../../FEDEASLab/Basic/FEDEASLab.md" class="dropdown-item">Basic analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../../FEDEASLab/Dynamics/FEDEASLab/" class="dropdown-item">Transient analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../../FEDEASLab/Plastic_Analysis/LimEqns_2dFrm/" class="dropdown-item">Plastic Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../../FEDEASLab/General/FEDEASLab/" class="dropdown-item">Core</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../" class="nav-link">Examples</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                    
+                        <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+        
+            
+            <li class="nav-item" data-level="1"><a href="#problem-2" class="nav-link">Problem 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        
+        </ul>
+    </div>
+</div></div>
+                    
+
+                    
+                        <div class="col-md-8" role="main">
+
+<h1 id="problem-2">Problem 2</h1>
+<pre><code class="matlab">LoadFedeas('222');
+format compact
+</code></pre>
+
+<pre><code class="matlab">idx = 1; n = 10; m = 2; bc = 'a';
+% Output{idx}.Case = strcat(num2str(n),'-',num2str(m),'-',bc);
+Output{idx} = CE222_Hw4P2(10,2,'a');
+</code></pre>
+
+<pre><code>ans =
+  250.0000
+  500.0000
+  250.0000
+
+ Norm of equilibrium error = 4.687351e-12
+Elapsed time is 0.187344 seconds.
+Tip displacement
+</code></pre>
+<p><img alt="png" src="../output_2_1.png" /></p>
+<p><img alt="png" src="../output_2_2.png" /></p>
+<p><img alt="png" src="../output_2_3.png" /></p>
+<p><img alt="png" src="../output_2_4.png" /></p>
+<p><img alt="png" src="../output_2_5.png" /></p>
+<h3 id="20x4">20x4</h3>
+<pre><code class="matlab">idx = 2; n = 20; m = 4; bc = 'a';
+Output{idx} = CE222_Hw4P2(n,m,bc,false);
+</code></pre>
+
+<pre><code>ans =
+  125.0000
+  250.0000
+  250.0000
+  250.0000
+  125.0000
+
+ Norm of equilibrium error = 1.110270e-11
+Elapsed time is 0.333585 seconds.
+</code></pre>
+<h3 id="40x4">40x4</h3>
+<pre><code class="matlab">idx = 3; n = 40; m = 4; bc = 'a';
+% CleanStart
+% Output{idx}.Case = strcat(num2str(n),'-',num2str(m),'-',bc);
+Output{idx} = CE222_Hw4P2(n,m,bc);
+</code></pre>
+
+<pre><code>ans =
+  125.0000
+  250.0000
+  250.0000
+  250.0000
+  125.0000
+
+ Norm of equilibrium error = 2.614496e-11
+Elapsed time is 0.618235 seconds.
+Tip displacement
+</code></pre>
+<p><img alt="png" src="../output_6_1.png" /></p>
+<p><img alt="png" src="../output_6_2.png" /></p>
+<p><img alt="png" src="../output_6_3.png" /></p>
+<p><img alt="png" src="../output_6_4.png" /></p>
+<p><img alt="png" src="../output_6_5.png" /></p>
+<pre><code class="matlab">% Output{4}.Case = strcat(num2str(2),'-',num2str(2),'-','a');
+Output{4} =  CE222_Hw4P2(2,2,'a',false);
+</code></pre>
+
+<pre><code>ans =
+  250.0000
+  500.0000
+  250.0000
+
+ Norm of equilibrium error = 3.292876e-12
+Elapsed time is 0.013195 seconds.
+</code></pre>
+<pre><code class="matlab">format compact
+figure, hold on
+for jdx=[1:4]
+    out = Output{jdx};
+    plot(out.State.x,out.State.Ux,'DisplayName',Output{jdx}.Case)
+end
+hold off
+title('Displacements along x at y = d/2')
+legend()
+</code></pre>
+
+<p><img alt="png" src="../output_8_1.png" /></p>
+<p>This plot indicates that the displacements of this problem are very insensitive to mesh resolution.</p>
+<pre><code class="matlab">m=[ 2, 2, 4, 4, 6, 6];
+n=[10,20,10,20,20,40];
+
+bc = 'a'
+for idx=[1:6]
+    bc
+    lx = 100/n(idx);
+    ly = 30/m(idx);
+    h = sqrt(lx^2 + ly^2)
+    OutputA{idx} = CE222_Hw4P2( n(idx), m(idx),bc,false);
+    OutputA{idx}.h = h
+    OutputA{idx}.lbl = strcat('n:',num2str(n(idx)),' m:',num2str(m(idx)));
+end
+
+bc = 'b'
+for idx=[1:6]
+    bc
+    lx = 100/n(idx);
+    ly = 30/m(idx);
+    h = sqrt(lx^2 + ly^2)
+    OutputB{idx} = CE222_Hw4P2( n(idx), m(idx),bc,false);
+    OutputB{idx}.h = h
+
+    OutputB{idx}.lbl = strcat('n:',num2str(n(idx)),' m:',num2str(m(idx)));
+end
+</code></pre>
+
+<pre><code>bc =
+    'a'
+bc =
+    'a'
+h =
+   18.0278
+ans =
+  250.0000
+  500.0000
+  250.0000
+
+ Norm of equilibrium error = 4.687351e-12
+Elapsed time is 0.087388 seconds.
+OutputA =
+  1x1 cell array
+    {1x1 struct}
+bc =
+    'a'
+h =
+   15.8114
+ans =
+  250.0000
+  500.0000
+  250.0000
+
+ Norm of equilibrium error = 6.116751e-12
+Elapsed time is 0.126509 seconds.
+OutputA =
+  1x2 cell array
+    {1x1 struct}    {1x1 struct}
+bc =
+    'a'
+h =
+   12.5000
+ans =
+  125.0000
+  250.0000
+  250.0000
+  250.0000
+  125.0000
+
+ Norm of equilibrium error = 7.092050e-12
+Elapsed time is 0.106591 seconds.
+OutputA =
+  1x3 cell array
+    {1x1 struct}    {1x1 struct}    {1x1 struct}
+bc =
+    'a'
+h =
+    9.0139
+ans =
+  125.0000
+  250.0000
+  250.0000
+  250.0000
+  125.0000
+
+ Norm of equilibrium error = 1.110270e-11
+Elapsed time is 0.215658 seconds.
+OutputA =
+  1x4 cell array
+    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}
+bc =
+    'a'
+h =
+    7.0711
+ans =
+   83.3333
+  166.6667
+  166.6667
+  166.6667
+  166.6667
+  166.6667
+   83.3333
+
+ Norm of equilibrium error = 1.095864e-11
+Elapsed time is 0.994828 seconds.
+OutputA =
+  1x5 cell array
+    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}
+bc =
+    'a'
+h =
+    5.5902
+ans =
+   83.3333
+  166.6667
+  166.6667
+  166.6667
+  166.6667
+  166.6667
+   83.3333
+
+ Norm of equilibrium error = 1.718144e-11
+Elapsed time is 1.036072 seconds.
+OutputA =
+  1x6 cell array
+    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}
+bc =
+    'b'
+bc =
+    'b'
+h =
+   18.0278
+ans =
+  250.0000
+  500.0000
+  250.0000
+
+ Norm of equilibrium error = 5.166162e-12
+Elapsed time is 0.068224 seconds.
+OutputB =
+  1x1 cell array
+    {1x1 struct}
+bc =
+    'b'
+h =
+   15.8114
+ans =
+  250.0000
+  500.0000
+  250.0000
+
+ Norm of equilibrium error = 7.603279e-12
+Elapsed time is 0.110418 seconds.
+OutputB =
+  1x2 cell array
+    {1x1 struct}    {1x1 struct}
+bc =
+    'b'
+h =
+   12.5000
+ans =
+  125.0000
+  250.0000
+  250.0000
+  250.0000
+  125.0000
+
+ Norm of equilibrium error = 7.842500e-12
+Elapsed time is 0.126853 seconds.
+OutputB =
+  1x3 cell array
+    {1x1 struct}    {1x1 struct}    {1x1 struct}
+bc =
+    'b'
+h =
+    9.0139
+ans =
+  125.0000
+  250.0000
+  250.0000
+  250.0000
+  125.0000
+
+ Norm of equilibrium error = 9.996352e-12
+Elapsed time is 0.720517 seconds.
+OutputB =
+  1x4 cell array
+    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}
+bc =
+    'b'
+h =
+    7.0711
+ans =
+   83.3333
+  166.6667
+  166.6667
+  166.6667
+  166.6667
+  166.6667
+   83.3333
+
+ Norm of equilibrium error = 1.183556e-11
+Elapsed time is 0.431673 seconds.
+OutputB =
+  1x5 cell array
+    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}
+bc =
+    'b'
+h =
+    5.5902
+ans =
+   83.3333
+  166.6667
+  166.6667
+  166.6667
+  166.6667
+  166.6667
+   83.3333
+
+ Norm of equilibrium error = 1.960940e-11
+Elapsed time is 0.719019 seconds.
+OutputB =
+  1x6 cell array
+    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}    {1x1 struct}
+</code></pre>
+<pre><code class="matlab">% clear ha,hb,Fb,Fa
+figure, hold on
+
+for jdx=[1:6]
+    ha(jdx) = OutputA{jdx}.h;
+    Fa(jdx) = max(OutputA{jdx}.F);
+    lbl{jdx} = OutputA{jdx}.lbl;
+end
+plot(ha,Fa,'DisplayName','a')
+
+
+for jdx=[1:6]
+    hb(jdx) = OutputB{jdx}.h;
+    Fb(jdx) = max(OutputB{jdx}.F);
+end
+plot(hb,Fb,'o','DisplayName','b')
+text(hb+0.75,Fb+25,lbl)
+
+hold off
+title('Max force vs h')
+legend('Location','east')
+</code></pre>
+
+<p><img alt="png" src="../output_11_1.png" /></p>
+<p>There is a lot that this plot is showing. The change in maximum force is generally decreasing as the representative element size, <script type="math/tex">h</script>, decreases, indicating convergence. However, this convergence is seemingly orthogonal to changes in lengthwise subdivisions, <script type="math/tex">n</script>. Additionally, models with the <code>a</code> and <code>b</code> boundary conditions behave exactly the same in this regard.</p>
+<pre><code class="matlab">% clear ha,hb,Fb,Fa
+figure, hold on
+
+for jdx=[1:6]
+    out = OutputA{jdx};
+    lbl{jdx} = strcat('a: ',out.lbl);
+    plot(out.State.x,out.State.Ux,':','DisplayName',lbl{jdx})
+end
+
+
+for jdx=[1:6]
+    out = OutputB{jdx};
+    lbl{jdx} = strcat('b: ',out.lbl);
+    plot(out.State.x,out.State.Ux,':','DisplayName',lbl{jdx})
+end
+
+hold off
+title('Displacements along x at y = d/2')
+legend('Location','east')
+</code></pre>
+
+<p><img alt="png" src="../output_13_1.png" /></p>
+<p>This plot further shows the invariance of this particular problem to boundary conditions.</p></div>
+                    
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p> © 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a> </p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

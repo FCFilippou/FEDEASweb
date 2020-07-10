@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of HermiteN</title>
+  <meta name="keywords" content="HermiteN">
+  <meta name="description" content="HERMITEN Hermite interpolation polynomials in interval -1&lt;xi&lt;1">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../FEDEASLab.html">Home</a> &gt;  <a href="../FEDEASLab.html">Utilities</a> &gt; <a href="FEDEASLab.html">Interpolation</a> &gt; HermiteN.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../FEDEASLab.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities\Interpolation&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>HermiteN
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>HERMITEN Hermite interpolation polynomials in interval -1&lt;xi&lt;1</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function hp = HermiteN(nn,deriv,xi) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment">HERMITEN Hermite interpolation polynomials in interval -1&lt;xi&lt;1
+  HP = HERMITEN (NN,DERIV,XI)
+  the function determines the values of Hermite interpolation polynomials of degree
+  DEGREE = 2*NN - 1, where NN is number of equally spaced nodes used to
+  compute the polynomilas. At each node, both the value of the required
+  polynomial and its derivative are considered for its evaluation.
+  The functions provides the derivative of order DERIV at integration points in the vector XI;
+  The values are returned in array LP with 2*NN rows representing the
+  different Hermite polynomials (2 per each node) and columns representing the
+  values at points XI;
+  The polynomial associated to the end nodes of the interval are located in
+  the first 4 rows of lp and the other locations are reserved for the polynomial
+  associated to internal nodes;
+
+  NOTE: XI need to be supplied in the interval -1&lt;xi&lt;1
+  EXAMPLE: HermiteN(3,2,xi) returns the second derivative of quintic Hermite polynomials at xi
+
+  To go from the interval [-1;+1] to the interval [0;L]:
+     Jac = 0.5*L;    xP = Jac.*(1.+xi);
+     hp(1:2:size(hp,1),:) = hp(1:2:size(hp,1),:)./(Jac^deriv);
+     hp(2:2:size(hp,1),:) = hp(2:2:size(hp,1),:)./(Jac^(deriv-1));</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

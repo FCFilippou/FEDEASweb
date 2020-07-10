@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Plot_DeformedStructure</title>
+  <meta name="keywords" content="Plot_DeformedStructure">
+  <meta name="description" content="PLOT_DEFORMEDSTRUCTURE plot deformed shape of the structure">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../FEDEASLab.html">Home</a> &gt;  <a href="../FEDEASLab.html">Utilities</a> &gt; <a href="FEDEASLab.html">Plotting</a> &gt; Plot_DeformedStructure.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../FEDEASLab.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities\Plotting&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>Plot_DeformedStructure
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>PLOT_DEFORMEDSTRUCTURE plot deformed shape of the structure</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function Plot_DeformedStructure (Model,ElemData,U,Post,PlotOpt) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment">PLOT_DEFORMEDSTRUCTURE plot deformed shape of the structure
+  PLOT_DEFORMEDSTRUCTURE (MODEL,ELEMDATA,U,POST,PLOTOPT)
+  the function plots the deformed shape of the structural model in data structure MODEL
+  based on the current displacements U and the element deformations;
+  the cell array ELEMDATA contains information about element properties and loading;
+  POST is either the vector of the element deformations Veps, or
+  a cell array with the element deformations in subfield ve of field Elem;
+  PLOTOPT is a data structure for plotting options with the following fields:
+    MAGF : magnification factor for deformed shape (default=10)
+    EList: list of elements to include in deformed shape (default all elements)
+    LnStl: line style for deformed shape (default = '-', i.e. solid line)
+    LnWth: line thickness for deformed shape (default = 2)  
+    LnClr: color for deformed shape (default = 'r', i.e. red)
+    PlJnt: switch for plotting joint offsets (default='yes')
+    PlCrd: switch for plotting element chord (default='no')
+    PlRel: switch for plotting element releases (defaul='yes')
+    HngSF: scale factor for size of release symbol (default = 1)
+    HOfSF: scale factor for offset of flexural hinge symbol from element end (default = 1)  
+    PlBnd: switch for displaying boundary symbols (default='yes')
+    BsClr: color for boundary nodes and symbols (default=[0.6 0 0.6])
+    NodSF: scale factor for size of boundary symbol (default = 1)</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Get_HngPos4DefoElem.html" class="code" title="function [AxHngCoor,FlHngCoor] = Get_HngPos4DefoElem (XYiod,XYjod,xyd,HngOpt)">Get_HngPos4DefoElem</a>	GET_HNGPOS4DEFOELEM determine axial and flexural hinge position for deformed element</li><li><a href="Get_ModelScale.html" class="code" title="function [ModSc,maxL,minL] = Get_ModelScale (Model,Ratio)">Get_ModelScale</a>	GET_MODELSCALE determines maximum and minimum element length in Model</li><li><a href="Plot_BounCond.html" class="code" title="function Plot_BounCond (XYZ,BOUN,BsClr,BsSz)">Plot_BounCond</a>	PLOT_BOUNCOND plots symbols for boundary conditions of structural model</li><li><a href="Plot_Model.html" class="code" title="function Plot_Model (Model,U,MPlOpt)">Plot_Model</a>	PLOT_MODEL plots the original or deformed geometry of the structural model</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Animate_EventSequence.html" class="code" title="function Animate_EventSequence (Model,ElemData,Ufh,Qh,PlotOpt)">Animate_EventSequence</a>	ANIMATE_EVENTSEQUENCE generate plot sequence with location of plastic hinges for each event</li><li><a href="Animate_ResponsewHngHist.html" class="code" title="function Animate_ResponsewHngHist (Model,ElemData,Post,PlotOpt)">Animate_ResponsewHngHist</a>	ANIMATE_RESPONSEwHNGHIST interactive or recorded response and plastic hinge history</li></ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

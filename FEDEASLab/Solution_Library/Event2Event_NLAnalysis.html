@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Event2Event_NLAnalysis</title>
+  <meta name="keywords" content="Event2Event_NLAnalysis">
+  <meta name="description" content="event-to-event incremental analysis of elasto-plastic structure with linear or P-DELTA geometry">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../FEDEASLab.html">Home</a> &gt;  <a href="FEDEASLab.html">Solution_Library</a> &gt; Event2Event_NLAnalysis.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../FEDEASLab.html"><img alt="<" border="0" src="../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Solution_Library&nbsp;<img alt=">" border="0" src="../right.png"></a></td></tr></table>-->
+
+<h1>Event2Event_NLAnalysis
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>event-to-event incremental analysis of elasto-plastic structure with linear or P-DELTA geometry</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>function [lamdah,Qh,Ufh,Vph,Iph] = Event2Event_NLAnalysis (opt,Model,ElemData,Loading,ConvPar) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="fragment"><pre class="comment">  event-to-event incremental analysis of elasto-plastic structure with linear or P-DELTA geometry
+  [LAMDAH,QH,UFH,VPH,IPH] = EVENT2EVENT_NLANALYSIS (OPT,MODEL,ELEMDATA,LOADING)
+  the function determines the load factor history LAMDAH of a structural model for an
+  event-to-event analysis under loading information in data structure LOADING;
+  the latter should have two fields, Pref for the load pattern to be factored, and
+  Pcf for the load pattern to remain constant;
+  each row of the load factor history vector corresponds to a different event;
+  OPT is a character variable with values of LG for linear, or NG for nonlinear geometry 
+  the data structure MODEL contains information about the structural model, and
+  element property information is provided in cell array ELEMDATA
+  the function returns the load factor history for each event in row vector LAMDAH,
+  the basic force history in array QH, the free global dof displacement history in array UFH,
+  the plastic element deformation history in array VPH, and the history of the index
+  of plastic hinge locations in array IPH; in the array UFH the row number corresponds
+  to the degree of freedom number, while in the arrays QH, VPH, and IPH the row number
+  corresponds to the basic force number; in the history arrays QH, UFH, VPH,and IPH
+  the column number corresponds to the event number
+  -----------------------------------------------------------------------------------------
+  developed by Chin-Long Lee using mixed-formulation and consistent Newton-Raphson    01/08
+  -----------------------------------------------------------------------------------------</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>

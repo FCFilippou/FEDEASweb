@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of Plot_2dMomntDistr</title>
+  <meta name="keywords" content="Plot_2dMomntDistr">
+  <meta name="description" content="PLOT_2dMOMNTDISTR plots moment distribution for 2d frame elements in current window">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../FEDEASLab.html">Home</a> &gt;  <a href="../FEDEASLab.html">Utilities</a> &gt; <a href="FEDEASLab.html">Plotting</a> &gt; Plot_2dMomntDistr.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../FEDEASLab.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="FEDEASLab.html">Index for Utilities\Plotting&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>Plot_2dMomntDistr
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>PLOT_2dMOMNTDISTR plots moment distribution for 2d frame elements in current window</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function Plot_2dMomntDistr (Model,ElemData,Post,ElemList,UserScale) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment">PLOT_2dMOMNTDISTR plots moment distribution for 2d frame elements in current window
+  PLOT_2dMOMNTDISTR (MODEL,ELEMDATA,POST,ELEMLIST,USERSCALE)
+  the function plots in the current window the moment distribution for 2d frame elements
+  in ELEMLIST for the structural model in data structure MODEL;
+  the cell array ELEMDATA carries information about element loading;
+  POST is either the vector of basic forces Q, or 
+  a cell array with post-processing information for the basic element forces in POST.ELEM{el}.Q;
+  the optional row vector ELEMLIST contains the numbers of elements to include for plotting,
+  e.g. [1:4 7 9] selects elements 1 through 4, 7 and 9;
+  the optional scalar argument USERSCALE is a magnification factor for the diagram (default=1)</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="Get_ModelScale.html" class="code" title="function [ModSc,maxL,minL] = Get_ModelScale (Model,Ratio)">Get_ModelScale</a>	GET_MODELSCALE determines maximum and minimum element length in Model</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Wed 22-Jan-2020 08:42:48 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>
