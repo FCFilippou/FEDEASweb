@@ -23,8 +23,8 @@ $(document).ready(function() {
     applyTopPadding();
 
     var search_term = getSearchTerm(),
-        $search_modal = $('#mkdocs_search_modal'),
-        $keyboard_modal = $('#mkdocs_keyboard_modal');
+        $search_modal = $('#elstir_search_modal'),
+        $keyboard_modal = $('#elstir_keyboard_modal');
 
     if (search_term) {
         $search_modal.modal();
@@ -32,12 +32,12 @@ $(document).ready(function() {
 
     // make sure search input gets autofocus everytime modal opens.
     $search_modal.on('shown.bs.modal', function() {
-        $search_modal.find('#mkdocs-search-query').focus();
+        $search_modal.find('#elstir-search-query').focus();
     });
 
     // Close search modal when result is selected
     // The links get added later so listen to parent
-    $('#mkdocs-search-results').click(function(e) {
+    $('#elstir-search-results').click(function(e) {
         if ($(e.target).is('a')) {
             $search_modal.modal('hide');
         }
@@ -65,7 +65,7 @@ $(document).ready(function() {
                 e.preventDefault();
                 $keyboard_modal.modal('hide');
                 $search_modal.modal('show');
-                $search_modal.find('#mkdocs-search-query').focus();
+                $search_modal.find('#elstir-search-query').focus();
                 break;
             case shortcuts.help:
                 $search_modal.modal('hide');
@@ -82,17 +82,17 @@ $(document).ready(function() {
     $('table').addClass('table table-striped table-hover');
 
     // Improve the scrollspy behaviour when users click on a TOC item.
-    $(".bs-sidenav a").on("click", function() {
-        var clicked = this;
-        setTimeout(function() {
-            var active = $('.nav li.active a');
-            active = active[active.length - 1];
-            if (clicked !== active) {
-                $(active).parent().removeClass("active");
-                $(clicked).parent().addClass("active");
-            }
-        }, 50);
-    });
+    // $(".bs-sidenav a").on("click", function() {
+    //     var clicked = this;
+    //     setTimeout(function() {
+    //         var active = $('.nav li.active a');
+    //         active = active[active.length - 1];
+    //         if (clicked !== active) {
+    //             $(active).parent().removeClass("active");
+    //             $(clicked).parent().addClass("active");
+    //         }
+    //     }, 50);
+    // });
 
     function showInnerDropdown(item) {
         var popup = $(item).next('.dropdown-menu');

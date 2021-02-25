@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://claudioperez.github.io/FEDEASdocs/Functions/latest/Element_Library/ExtrReshu/">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>ExtrReshu - FEDEASLab</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../../../../_static/css/extra.css" rel="stylesheet">
+
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- <script>
+            $(".nav .nav-link").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).addClass("active");
+         });
+         </script> -->
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-170527070-1', 'auto');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">FEDEASLab</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav ml-auto">
+                        <!--<ul class="nav navbar-nav">-->
+                            <li class="navitem">
+                                <a href="../../../../About/" class="nav-link">About</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../Guides/" class="nav-link">Guides</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li><a href="../.." class="dropdown-item">Module Breakdown</a></li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Modeling Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li><a href="../" class="dropdown-item">Elements</a></li>
+            
+<li><a href="../../Material_Library/" class="dropdown-item">Materials</a></li>
+            
+<li><a href="../../Section_Library/" class="dropdown-item">Sections</a></li>
+    </ul>
+  </li>
+                                    
+<li><a href="../../Analysis_Functions/" class="dropdown-item">Analysis Functions</a></li>
+                                    
+<li><a href="../../Utility_Functions/" class="dropdown-item">Utilities</a></li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../Gallery/" class="nav-link">Gallery</a>
+                            </li>
+                        <!--</ul>-->
+                        <!--</div>-->
+
+                    <!-- <ul class="nav navbar-nav ml-auto"> -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#elstir_search_modal">
+                               <!--<img src="img/search.png" class="icon">--> <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
+            <!-- <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Library</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav> -->
+            
+            <div class="row">
+                    
+                        <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card ">
+        <ul class="nav flex-column">
+        
+            
+            <li class="nav-item " data-level="1">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/" class="">Element Library</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/" class="nav-link ">Element Library</a> -->
+              
+              <ul class="nav flex-column">
+              <div class="dropdown-divider"></div>
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/BInel2dFrm_wEPLHM/" class="">BInel2dFrm_wEPLHM</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/BInel2dFrm_wEPLHM/" class="nav-link ">BInel2dFrm_wEPLHM</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/BInel2dFrm_wEPLHNMYS/" class="">BInel2dFrm_wEPLHNMYS</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/BInel2dFrm_wEPLHNMYS/" class="nav-link ">BInel2dFrm_wEPLHNMYS</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/DefGeom_2dFrm/" class="">DefGeom_2dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/DefGeom_2dFrm/" class="nav-link ">DefGeom_2dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/DefGeom_3dFrm/" class="">DefGeom_3dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/DefGeom_3dFrm/" class="nav-link ">DefGeom_3dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/Dinel2dFrm_EBwDF/" class="">Dinel2dFrm_EBwDF</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/Dinel2dFrm_EBwDF/" class="nav-link ">Dinel2dFrm_EBwDF</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/Dinel2dFrm_EBwFF/" class="">Dinel2dFrm_EBwFF</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/Dinel2dFrm_EBwFF/" class="nav-link ">Dinel2dFrm_EBwFF</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/ElementLoading/" class="">ElementLoading</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/ElementLoading/" class="nav-link ">ElementLoading</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/Extract_BasicEl2SecState/" class="">Extract_BasicEl2SecState</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/Extract_BasicEl2SecState/" class="nav-link ">Extract_BasicEl2SecState</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/Extract_El2MatState/" class="">Extract_El2MatState</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/Extract_El2MatState/" class="nav-link ">Extract_El2MatState</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/Extract_El2SecState/" class="">Extract_El2SecState</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/Extract_El2SecState/" class="nav-link ">Extract_El2SecState</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item active" data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/ExtrReshu/" class="active">ExtrReshu</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/ExtrReshu/" class="nav-link active">ExtrReshu</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/GeomTran_2dFrm/" class="">GeomTran_2dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/GeomTran_2dFrm/" class="nav-link ">GeomTran_2dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/GeomTran_3dFrm/" class="">GeomTran_3dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/GeomTran_3dFrm/" class="nav-link ">GeomTran_3dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/GeomTran_Truss/" class="">GeomTran_Truss</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/GeomTran_Truss/" class="nav-link ">GeomTran_Truss</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/GPYS/" class="">GPYS</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/GPYS/" class="nav-link ">GPYS</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/Inel2dFrm/" class="">Inel2dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/Inel2dFrm/" class="nav-link ">Inel2dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/InelTruss/" class="">InelTruss</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/InelTruss/" class="nav-link ">InelTruss</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/kg_2dFrm/" class="">kg_2dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/kg_2dFrm/" class="nav-link ">kg_2dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/kg_3dFrm/" class="">kg_3dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/kg_3dFrm/" class="nav-link ">kg_3dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/kg_Truss/" class="">kg_Truss</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/kg_Truss/" class="nav-link ">kg_Truss</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/Large2du2v_Frm/" class="">Large2du2v_Frm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/Large2du2v_Frm/" class="nav-link ">Large2du2v_Frm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/Large3du2v_Frm/" class="">Large3du2v_Frm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/Large3du2v_Frm/" class="nav-link ">Large3du2v_Frm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/LE2dFrm/" class="">LE2dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/LE2dFrm/" class="nav-link ">LE2dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/LE2dFrm_wPdelta/" class="">LE2dFrm_wPdelta</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/LE2dFrm_wPdelta/" class="nav-link ">LE2dFrm_wPdelta</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/LE3dFrm/" class="">LE3dFrm</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/LE3dFrm/" class="nav-link ">LE3dFrm</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/LETruss/" class="">LETruss</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/LETruss/" class="nav-link ">LETruss</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/MaterialWrapper/" class="">MaterialWrapper</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/MaterialWrapper/" class="nav-link ">MaterialWrapper</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/SectionWrapper/" class="">SectionWrapper</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/SectionWrapper/" class="nav-link ">SectionWrapper</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+                    
+            <li class="nav-item " data-level="2">
+              <a href="/FEDEASdocs/Functions/latest/Element_Library/TranJnt/" class="">TranJnt</a>
+              <!-- <a href="/FEDEASdocs/Functions/latest/Element_Library/TranJnt/" class="nav-link ">TranJnt</a> -->
+              
+              <ul class="nav flex-column">
+              
+              </ul>
+              
+            </li>
+                    
+              </ul>
+              
+            </li>
+        
+        </ul>
+    </div>
+</div></div>
+                    
+
+                    
+                        <article class="col-md-9 p-3">
+                        <!-- <article class="col-md-9"> -->
+                        
+
+<!-- <a name="_top"></a> -->
+<!-- <div><a href="../../.autoindex.md">Home</a> &gt;  -->
+<p><a href="#">latest</a> &gt; <a href=".autoindex.md">Element_Library</a> &gt; <!-- ExtrReshu.m</div> --></p>
+<!--<table width="100%"><tr><td align="left"><a href="../../.autoindex.md"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href=".autoindex.md">Index for latest\Element_Library&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+<h1 id="extrreshu"><code>ExtrReshu</code></h1>
+<h2 id="purpose"><a name="_name"></a>Purpose</h2>
+<p>EXTRRESHU extracts displacements and increments from State and reshapes into array</p>
+<!-- <div class="box"><strong>EXTRRESHU extracts displacements and increments from State and reshapes into array</strong></div> -->
+<h2 id="synopsis"><a name="_synopsis"></a>Synopsis</h2>
+<p><code>function [u,Du,DDu] = ExtrReshu (State,ndf,nen)</code></p>
+<h2 id="description">Description</h2>
+<pre class="comment">EXTRRESHU extracts displacements and increments from State and reshapes into array
+ [U,DU,DDU] = EXTRRESHU (STATE,NDF,NEN)
+  the function extracts the displacements and their increments from State
+  and reshapes these into an NDF x NEN array,
+  where NDF is no of dofs/node and NEN number of end nodes for element</pre>
+<!-- <div class="fragment"><pre class="comment">EXTRRESHU extracts displacements and increments from State and reshapes into array
+ [U,DU,DDU] = EXTRRESHU (STATE,NDF,NEN)
+  the function extracts the displacements and their increments from State
+  and reshapes these into an NDF x NEN array,
+  where NDF is no of dofs/node and NEN number of end nodes for element</pre></div> -->
+<!-- crossreference -->
+<h2 id="cross-reference-information"><a name="_cross"></a>Cross-Reference Information</h2>
+<p>This function calls: <ul style="list-style-image:url(../../matlabicon.gif)"> </ul></p>
+<p>This function is called by: <ul style="list-style-image:url(../../matlabicon.gif)"> <li><a href="Dinel2dFrm_EBwDF.md" class="code" title="function ElemResp = Dinel2dFrm_EBwDF (action,el_no,xyz,ElemData,ElemState)">Dinel2dFrm_EBwDF</a> DINEL2dFRM_EBwDF 2d-frame element with distributed inelasticity (displacement formulation)</li><li><a href="Dinel2dFrm_EBwFF.md" class="code" title="function ElemResp = Dinel2dFrm_EBwFF (action,el_no,xyz,ElemData,ElemState)">Dinel2dFrm_EBwFF</a> DINEL2dFRM_EBwFF 2d-frame element with distributed inelasticity (force formulation)</li><li><a href="Inel2dFrm.md" class="code" title="function ElemResp = Inel2dFrm (action,el_no,xyz,ElemData,ElemState)">Inel2dFrm</a> INEL2dFRM inelastic 2d frame element with different basic element types</li><li><a href="InelTruss.md" class="code" title="function ElemResp = InelTruss (action,el_no,xyz,ElemData,ElemState)">InelTruss</a> INELTRUSS 2d/3d inelastic truss element under linear or nonlinear geometry</li><li><a href="LE2dFrm.md" class="code" title="function ElemResp = LE2dFrm (action,el_no,xyz,ElemData,ElemState)">LE2dFrm</a> LE2dFRM 2d LE frame element under linear or nonlinear geometry</li><li><a href="LE2dFrm_wPdelta.md" class="code" title="function ElemResp = LE2dFrm_wPdelta (action,el_no,xyz,ElemData,ElemState)">LE2dFrm_wPdelta</a> LE2dFRM 2d linear elastic frame element with P-delta effect under linear or nonlinear geometry</li><li><a href="LE3dFrm.md" class="code" title="function ElemResp = LE3dFrm (action,el_no,xyz,ElemData,ElemState)">LE3dFrm</a> LE3dFRM 3d linear frame element under linear or nonlinear geometry</li><li><a href="LETruss.md" class="code" title="function ElemResp = LETruss (action,el_no,xyz,ElemData,ElemState)">LETruss</a> LETRUSS 2d/3d linear truss element under linear or nonlinear geometry</li></ul> <!-- crossreference --></p>
+<!-- <hr><address>Generated on Mon 15-Feb-2021 18:38:47 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address> -->
+
+                        
+                        </article>
+                        <!-- <div class="col-md-8" role="main"></div> -->
+                    
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>&copy 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a></p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="elstir_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="elstir-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="elstir-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="elstir_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

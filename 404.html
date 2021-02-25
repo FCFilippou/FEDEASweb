@@ -7,18 +7,25 @@
         
         
         
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>FedeasLab</title>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
-        <link href="/css/extra.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/FEDEASdocs/img/favicon.ico">
+        <title>FEDEASLab</title>
+        <link href="/FEDEASdocs/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/FEDEASdocs/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/FEDEASdocs/css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/FEDEASdocs/_static/css/extra.css" rel="stylesheet">
 
-        <script src="/js/jquery-1.10.2.min.js" defer></script>
-        <script src="/js/bootstrap.min.js" defer></script>
+        <script src="/FEDEASdocs/js/jquery-1.10.2.min.js" defer></script>
+        <script src="/FEDEASdocs/js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
+        <!-- <script>
+            $(".nav .nav-link").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).addClass("active");
+         });
+         </script> -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -33,7 +40,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/.">FedeasLab</a>
+                <a class="navbar-brand" href="/FEDEASdocs/.">FEDEASLab</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -42,91 +49,55 @@
                 <!-- Expanded navigation -->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav ml-auto">
+                        <!--<ul class="nav navbar-nav">-->
                             <li class="navitem">
-                                <a href="/about/" class="nav-link">About</a>
+                                <a href="/FEDEASdocs/About/" class="nav-link">About</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="/get-started" class="dropdown-item">Getting Started</a>
-</li>
-                                    
-<li>
-    <a href="/DataStructs/" class="dropdown-item">Data Structures</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="/FEDEASdocs/Guides/" class="nav-link">Guides</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="/FEDEASLab/" class="dropdown-item">Index</a>
-</li>
+<li><a href="/FEDEASdocs/Functions/latest" class="dropdown-item">Module Breakdown</a></li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Libraries</a>
+    <a href="#" class="dropdown-item">Modeling Libraries</a>
     <ul class="dropdown-menu">
             
-<li>
-    <a href="/matlib/" class="dropdown-item">Materials</a>
-</li>
+<li><a href="/FEDEASdocs/Functions/latest/Element_Library/" class="dropdown-item">Elements</a></li>
             
-<li>
-    <a href="/elemlib/" class="dropdown-item">Elements</a>
-</li>
+<li><a href="/FEDEASdocs/Functions/latest/Material_Library/" class="dropdown-item">Materials</a></li>
             
-<li>
-    <a href="/ModelLib/" class="dropdown-item">Modeling Library</a>
-</li>
-            
-<li>
-    <a href="/FEDEASLab/src/Section_Library/" class="dropdown-item">Section Library</a>
-</li>
-            
-<li>
-    <a href="/FEDEASLab/src/Solution_Library/" class="dropdown-item">Solution Library</a>
-</li>
+<li><a href="/FEDEASdocs/Functions/latest/Section_Library/" class="dropdown-item">Sections</a></li>
     </ul>
   </li>
                                     
-<li>
-    <a href="/FEDEASLab/Basic/FEDEASLab.md" class="dropdown-item">Basic analysis</a>
-</li>
+<li><a href="/FEDEASdocs/Functions/latest/Analysis_Functions/" class="dropdown-item">Analysis Functions</a></li>
                                     
-<li>
-    <a href="/FEDEASLab/Dynamics/" class="dropdown-item">Transient analysis</a>
-</li>
-                                    
-<li>
-    <a href="/FEDEASLab/Plastic_Analysis/LimEqns_2dFrm.md" class="dropdown-item">Plastic Analysis</a>
-</li>
-                                    
-<li>
-    <a href="/FEDEASLab/General/FEDEASLab.md" class="dropdown-item">Core</a>
-</li>
+<li><a href="/FEDEASdocs/Functions/latest/Utility_Functions/" class="dropdown-item">Utilities</a></li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="/examples/" class="nav-link">Examples</a>
+                                <a href="/FEDEASdocs/Gallery/" class="nav-link">Gallery</a>
                             </li>
-                        </ul>
+                        <!--</ul>-->
+                        <!--</div>-->
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <!-- <ul class="nav navbar-nav ml-auto"> -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#elstir_search_modal">
+                               <!--<img src="img/search.png" class="icon">--> <i class="fa fa-search"></i> Search
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        
         <div class="container">
+            
             <div class="row">
 
     <div class="row-fluid">
@@ -142,17 +113,17 @@
 
         <footer class="col-md-12">
             <hr>
-            <p> © 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a> </p>
+                <p>&copy 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a></p>
         </footer>
         <script>
-            var base_url = "/",
+            var base_url = "/FEDEASdocs/",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js" defer></script>
+        <script src="/FEDEASdocs/js/base.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-        <script src="/search/main.js" defer></script>
+        <script src="/FEDEASdocs/search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal" id="elstir_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -166,16 +137,16 @@
                 </p>
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="elstir-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="elstir-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+</div><div class="modal" id="elstir_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

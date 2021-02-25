@@ -26,7 +26,7 @@ function formatResult (location, title, summary) {
 }
 
 function displayResults (results) {
-  var search_results = document.getElementById("mkdocs-search-results");
+  var search_results = document.getElementById("elstir-search-results");
   while (search_results.firstChild) {
     search_results.removeChild(search_results.firstChild);
   }
@@ -42,8 +42,8 @@ function displayResults (results) {
 }
 
 function doSearch () {
-  var query = document.getElementById('mkdocs-search-query').value;
-  if (query.length > 2) {
+  var query = document.getElementById('elstir-search-query').value;
+  if (query.length > min_search_length) {
     if (!window.Worker) {
       displayResults(search(query));
     } else {
@@ -56,7 +56,7 @@ function doSearch () {
 }
 
 function initSearch () {
-  var search_input = document.getElementById('mkdocs-search-query');
+  var search_input = document.getElementById('elstir-search-query');
   if (search_input) {
     search_input.addEventListener("keyup", doSearch);
   }
@@ -73,6 +73,8 @@ function onWorkerMessage (e) {
   } else if (e.data.results) {
     var results = e.data.results;
     displayResults(results);
+  } else if (e.data.config) {
+    min_search_length = e.data.config.min_search_length-1;
   }
 }
 

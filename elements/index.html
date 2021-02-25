@@ -6,21 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        
+        <link rel="canonical" href="https://claudioperez.github.io/FEDEASdocs/elements/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Finite elements - FedeasLab</title>
+        <title>Finite elements - FEDEASLab</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
-        <link href="../css/extra.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../_static/css/extra.css" rel="stylesheet">
 
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
-
+        <!-- <script>
+            $(".nav .nav-link").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).addClass("active");
+         });
+         </script> -->
 
 
         <script>
@@ -37,7 +43,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">FedeasLab</a>
+                <a class="navbar-brand" href="..">FEDEASLab</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -46,91 +52,63 @@
                 <!-- Expanded navigation -->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav ml-auto">
+                        <!--<ul class="nav navbar-nav">-->
                             <li class="navitem">
-                                <a href="../about/" class="nav-link">About</a>
+                                <a href="../About/" class="nav-link">About</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../get-started" class="dropdown-item">Getting Started</a>
-</li>
-                                    
-<li>
-    <a href="../DataStructs/" class="dropdown-item">Data Structures</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../Guides/" class="nav-link">Guides</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../FEDEASLab/" class="dropdown-item">Index</a>
-</li>
+<li><a href="../Functions/latest" class="dropdown-item">Module Breakdown</a></li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Libraries</a>
+    <a href="#" class="dropdown-item">Modeling Libraries</a>
     <ul class="dropdown-menu">
             
-<li>
-    <a href="../matlib/" class="dropdown-item">Materials</a>
-</li>
+<li><a href="../Functions/latest/Element_Library/" class="dropdown-item">Elements</a></li>
             
-<li>
-    <a href="../elemlib/" class="dropdown-item">Elements</a>
-</li>
+<li><a href="../Functions/latest/Material_Library/" class="dropdown-item">Materials</a></li>
             
-<li>
-    <a href="../ModelLib/" class="dropdown-item">Modeling Library</a>
-</li>
-            
-<li>
-    <a href="../FEDEASLab/src/Section_Library/" class="dropdown-item">Section Library</a>
-</li>
-            
-<li>
-    <a href="../FEDEASLab/src/Solution_Library/" class="dropdown-item">Solution Library</a>
-</li>
+<li><a href="../Functions/latest/Section_Library/" class="dropdown-item">Sections</a></li>
     </ul>
   </li>
                                     
-<li>
-    <a href="../FEDEASLab/Basic/FEDEASLab.md" class="dropdown-item">Basic analysis</a>
-</li>
+<li><a href="../Functions/latest/Analysis_Functions/" class="dropdown-item">Analysis Functions</a></li>
                                     
-<li>
-    <a href="../FEDEASLab/Dynamics/" class="dropdown-item">Transient analysis</a>
-</li>
-                                    
-<li>
-    <a href="../FEDEASLab/Plastic_Analysis/LimEqns_2dFrm.md" class="dropdown-item">Plastic Analysis</a>
-</li>
-                                    
-<li>
-    <a href="../FEDEASLab/General/FEDEASLab.md" class="dropdown-item">Core</a>
-</li>
+<li><a href="../Functions/latest/Utility_Functions/" class="dropdown-item">Utilities</a></li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="../examples/" class="nav-link">Examples</a>
+                                <a href="../Gallery/" class="nav-link">Gallery</a>
                             </li>
-                        </ul>
+                        <!--</ul>-->
+                        <!--</div>-->
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <!-- <ul class="nav navbar-nav ml-auto"> -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#elstir_search_modal">
+                               <!--<img src="img/search.png" class="icon">--> <i class="fa fa-search"></i> Search
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        
         <div class="container">
+            
+            <!-- <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Library</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav> -->
+            
             <div class="row">
                     
                         <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
@@ -139,24 +117,10 @@
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
-
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+    <div id="toc-collapse" class="navbar-collapse collapse card ">
         <ul class="nav flex-column">
         
-            
-            <li class="nav-item" data-level="1"><a href="#finite-elements" class="nav-link">Finite elements</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#mixed-field-elements" class="nav-link">Mixed-Field Elements</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#primal-field-elements" class="nav-link">Primal Field Elements</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
         
         </ul>
     </div>
@@ -164,13 +128,15 @@
                     
 
                     
-                        <div class="col-md-8" role="main">
+                        <article class="col-md-9 p-3">
+                        <!-- <article class="col-md-9"> -->
+                        
 
 <h1 id="finite-elements">Finite elements</h1>
 <p>This page briefly presents some important families of finite elements.</p>
 <h2 id="mixed-field-elements">Mixed-Field Elements</h2>
 <h3 id="beams">Beams</h3>
-<h4 id="3-field">3-Field</h4>
+<h4 id="field">3-Field</h4>
 <h2 id="primal-field-elements">Primal Field Elements</h2>
 <p>Elements in this family are formulated in terms of an unknown displacement field from the total potential energy functional.</p>
 <h3 id="lagrange-tensor-product-quad">Lagrange Tensor Product Quad</h3>
@@ -183,14 +149,18 @@
 </blockquote>
 <h3 id="lagrange-hierarchical-quad">Lagrange Hierarchical Quad</h3>
 <h3 id="lagrange-standard-simplex">Lagrange Standard Simplex</h3>
-<h3 id="lagrange-hierarchical-simplex">Lagrange Hierarchical Simplex</h3></div>
+<h3 id="lagrange-hierarchical-simplex">Lagrange Hierarchical Simplex</h3>
+
+                        
+                        </article>
+                        <!-- <div class="col-md-8" role="main"></div> -->
                     
             </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-            <p> © 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a> </p>
+                <p>&copy 1998-2020 UC Regents, <a href="http://filippou.ce.berkeley.edu/">Filip C. Filippou</a></p>
         </footer>
         <script>
             var base_url = "..",
@@ -200,7 +170,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
         <script src="../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal" id="elstir_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -214,16 +184,16 @@
                 </p>
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="elstir-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="elstir-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+</div><div class="modal" id="elstir_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

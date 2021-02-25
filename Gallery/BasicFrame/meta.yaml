@@ -1,0 +1,11 @@
+#URL: https://github.com/FEDEASLab/BasicExamples
+archive: $FEDEASLAB_DEV
+#archive_location: Gallery/BasicExamples
+collection-title: Linear analysis
+description: Analysis of a basic 2-story, 1-bay steel frame.
+id: fdlb-0013
+medium: CE221
+programming-language: Matlab
+system: CE221
+title: Basic Frame
+type: book
