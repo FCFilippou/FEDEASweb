@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of PlasticAnalysis_wUBT</title>
+  <meta name="keywords" content="PlasticAnalysis_wUBT">
+  <meta name="description" content="PLASTICANALYSIS_wUBT collapse load factor and deformation increments by upper bound theorem of plastic analysis">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html v1.5 &copy; 2003-2005 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../index.html">Home</a> &gt;  <a href="index.html">Analysis_Functions</a> &gt; PlasticAnalysis_wUBT.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../index.html"><img alt="<" border="0" src="../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="index.html">Index for Analysis_Functions&nbsp;<img alt=">" border="0" src="../right.png"></a></td></tr></table>-->
+
+<h1>PlasticAnalysis_wUBT
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>PLASTICANALYSIS_wUBT collapse load factor and deformation increments by upper bound theorem of plastic analysis</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="box"><strong>function [lamdac,DUf,DVhp] = PlasticAnalysis_wUBT (Af,Qpl,Pref,Pcf,Options) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+<div class="fragment"><pre class="comment">PLASTICANALYSIS_wUBT collapse load factor and deformation increments by upper bound theorem of plastic analysis
+  [LAMDAC,DUF,DVHP] = PLASTICANALYSIS_wUBT (AF,QPL,PREF,PCF)
+  the function uses the upper bound theorem of plastic analysis
+  to determine the collapse load factor LAMDAC, and the displacement and plastic deformation
+  increments of the collapse mechanism DUF and DVHP, respectively,
+  of a structural model under reference load vector PREF and force vector PCF at free dofs;
+  the reference force vector PREF represents the load pattern to be factored, while
+  the force vector PFC represents the load pattern that remains unfactored;
+  for the sign of PFU note that the equilibrium equations are: lambda Pref + Pcf = Bf Q;
+  there are two options for supplying the kinematic matrix Af:
+  (a) as data structure Model with information about the structural model, that is used
+      to set up the kinematic matrix Af of the structure automatically, or
+  (b) as nq by nf matrix where nq = total number of deformations and nf = no of free dofs;
+  there are two options for supplying the plastic capacities QPL:
+  (a) as cell array ELEMDATA with plastic capacities in fields Np for axial and Mp for flexural
+  (b) as one column vector for the case that positive and negative capacities are the same,
+       or, as two column array with positive plastic capacities in the first column
+       and negative plastic capacities in the second (in absolute value) (signs matching Q!)
+  NOTE: mixing of options (a) and (b) is not supported!</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+
+<hr><address>Generated on Mon 24-May-2021 19:06:44 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/" title="Matlab Documentation in HTML">m2html</a></strong> &copy; 2005</address>
+</body>
+</html>
